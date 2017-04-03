@@ -123,7 +123,7 @@ set lazyredraw
 set showtabline=2
 
 " specify the behavior when switching between buffers
-set switchbuf=useopen,usetab,newtab
+"set switchbuf=useopen,usetab,newtab
 
 
 "-----------------------------------------------------------------------
