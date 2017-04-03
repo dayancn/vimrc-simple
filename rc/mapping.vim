@@ -99,6 +99,16 @@ nmap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 
 "-----------------------------------------------------------------------
+" tags related mappings
+"-----------------------------------------------------------------------
+nmap <leader>ts :ts <C-R>=expand("<cword>")<cr><cr>
+nmap <leader>tt :ts<cr>
+nmap <leader>tp :tp<cr>
+nmap <leader>tf :tp<cr>
+nmap <leader>tn :tn<cr>
+
+
+"-----------------------------------------------------------------------
 " 6. quickfix mappings
 "-----------------------------------------------------------------------
 nmap <silent> <leader>cw :cw<cr>
