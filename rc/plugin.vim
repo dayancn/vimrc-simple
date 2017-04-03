@@ -42,3 +42,15 @@ else
 	" let g:LookupFile_TagExpr="\"" . $HOME. "/.lookupfile\""
 	let g:LookupFile_TagExpr='".lookupfile"'
 endif
+
+
+" ---------------------------------------------------------------------------
+" acp: automatically opens popup menu for completions
+" ---------------------------------------------------------------------------
+let g:acp_enableAtStartup = 0
+
+
+" ---------------------------------------------------------------------------
+" supertab
+" ---------------------------------------------------------------------------
+let loaded_supertab = 1
