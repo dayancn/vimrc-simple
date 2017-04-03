@@ -48,6 +48,9 @@ set cursorline
 " set keyword chars
 set iskeyword=a-z,A-Z,48-57,_,.,-,>
 
+" some chars preceded with a \ will get a special meaning.
+set magic
+
 " highlight search results
 set hlsearch
 
@@ -95,9 +98,6 @@ set updatetime=100
 " \K to get help info in split window
 runtime! ftplugin/man.vim
 
-" enable filetype detection plugins
-filetype plugin indent on
-
 " always show the cursor current position
 set ruler
 set rulerformat=%15(%c%V\ %p%%%)
@@ -105,9 +105,75 @@ set rulerformat=%15(%c%V\ %p%%%)
 " number of screen lines to use for the command-line
 set cmdheight=2
 
+" make backspace work as we think
+set backspace=eol,start,indent
+
+" allow specified keys that move the cursor left/right to move to the previous/next line
+set whichwrap+=<,>,h,l
+
+" no error bell
+set noerrorbells
+set novisualbell
+set t_vb=
+
+" don't redraw while executing macros registers and other commands that have not been typed.
+set lazyredraw
+
 
 "-----------------------------------------------------------------------
-" 2. autocmd
+" 3. advanced programming related settings
+"-----------------------------------------------------------------------
+" use spaces instead of tabs
+" set expandtab
+set shiftwidth=8
+set tabstop=8
+set smarttab
+
+" this option changes how text is displayed, it doesn't change the text in the buffer.
+set wrap
+set textwidth=78
+
+" wrap long lines
+set linebreak
+
+set autoindent
+set smartindent
+
+" set foldenable
+" set foldmethod=syntax
+" set foldmethod=indent
+" set foldclose=all
+" set foldcolumn=4
+
+" a file that matches with one of these patterns is ignored when expanding
+" wildcards, completing file or directory names, and influences the result of
+" expand(), glob() and globpath() unless a flag is passed to disable this.
+set wildignore=*~,*.pyc,*.o,*.obj,*.swp
+
+" show filler lines and ignore all whitespace when vimdiff
+set diffopt=filler,iwhite
+
+" set utf8 as standard encoding
+set encoding=utf8
+
+" gives the end-of-line (<EOL>) formats
+set fileformats=unix,dos
+
+" this is a list of character encodings considered when starting to edit an existing file.
+set fileencodings=ucs-bom,utf-8,gb18030,big5
+
+" enable syntax highlighting
+syntax enable
+
+" enable filetype detection plugins
+filetype plugin indent on
+
+" options for insert mode completion
+set completeopt=longest,menu
+
+
+"-----------------------------------------------------------------------
+" 3. autocmd
 "-----------------------------------------------------------------------
 if has("autocmd")
 	augroup VimGroup
