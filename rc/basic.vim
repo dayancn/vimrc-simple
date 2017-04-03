@@ -199,5 +199,6 @@ if has("autocmd")
 		" autocmd BufWrite * :call DeleteTrailingWhiteSpace()
 		autocmd BufWrite \w\+ :call DeleteTrailingWhiteSpace()
 		autocmd BufWrite *.txt :call DeleteTrailingWhiteSpace()
+		autocmd BufWrite *.vim :call DeleteTrailingWhiteSpace()
 	augroup END
 endif
