@@ -76,5 +76,7 @@ if has("autocmd")
 		autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 		" don't write swapfile on most commonly used directories for NFS mounts or USB sticks
 		autocmd BufNewFile,BufReadPre /media/*,/mnt/* set directory=/tmp,/var/tmp
+		" start with spec file template
+		autocmd BufEnter *.c,*.h,*.cpp,*.hpp,*.cc source ~/.vim/syntax/c.vim
 	augroup END
 endif
