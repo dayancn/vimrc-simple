@@ -125,6 +125,9 @@ set showtabline=2
 " specify the behavior when switching between buffers
 "set switchbuf=useopen,usetab,newtab
 
+" name of the shell to use for ! and :! commands.
+set shell=/bin/bash
+
 
 "-----------------------------------------------------------------------
 " 3. advanced programming related settings
