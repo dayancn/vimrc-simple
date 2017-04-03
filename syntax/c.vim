@@ -41,6 +41,8 @@ set shiftwidth=8
 set noexpandtab
 " line wrapping in c comments not c code
 set textwidth=78        " Set the line wrap length
+" enables automatic C program indenting.
+set cindent
 
 
 " C-mode formatting options
