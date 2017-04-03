@@ -196,6 +196,8 @@ if has("autocmd")
 		" start with spec file template
 		autocmd BufEnter *.c,*.h,*.cpp,*.hpp,*.cc source ~/.vim/syntax/c.vim
 		" delete trailing white space on save
-		autocmd BufWrite * :call DeleteTrailingWhiteSpace()
+		" autocmd BufWrite * :call DeleteTrailingWhiteSpace()
+		autocmd BufWrite \w\+ :call DeleteTrailingWhiteSpace()
+		autocmd BufWrite *.txt :call DeleteTrailingWhiteSpace()
 	augroup END
 endif
