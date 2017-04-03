@@ -98,3 +98,27 @@ function! <SID>BufcloseCloseIt()
 	endif
 endfunction
 
+
+" search on-line
+function! OnlineDoc(search_engine)
+	" let s:browser = "/opt/google/chrome/chrome"
+	" let s:browser = "/usr/bin/chromium-browser"
+	let s:browser = "/usr/bin/firefox"
+	let s:wordUnderCursor = expand("<cword>")
+
+	if a:search_engine == 0
+		let s:url = "http://www.google.com/codesearch?q=".s:wordUnderCursor
+	elseif a:search_engine == 1
+		let s:url = "http://www.baidu.com/s?wd=".s:wordUnderCursor
+	elseif a:search_engine == 2
+		let s:url = "http://cn.bing.com/search?q=".s:wordUnderCursor
+	elseif a:search_engine == 3
+		let s:url = "http://dict.cn/".s:wordUnderCursor
+	elseif a:search_engine == 4
+		let s:url = "http://www.iciba.com/".s:wordUnderCursor
+	endif
+
+	let s:cmd = "silent !" . s:browser . " " . s:url
+	execute  s:cmd
+	redraw!
+endfunction

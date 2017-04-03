@@ -135,6 +135,19 @@ vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 
 
 "-----------------------------------------------------------------------
+" search on-line mappings
+"-----------------------------------------------------------------------
+" www.baidu.com
+map <leader>a :call OnlineDoc(1)<CR>
+" www.bing.com
+map <leader>b :call OnlineDoc(2)<CR>
+" dict.cn
+map <leader>c :call OnlineDoc(3)<CR>
+" www.iciba.com
+map <leader>e :call OnlineDoc(4)<CR>
+
+
+"-----------------------------------------------------------------------
 " other mappings
 "-----------------------------------------------------------------------
 " Remove the Windows ^M - when the encodings gets messed up
