@@ -16,7 +16,7 @@ let g:maplocalleader='\'
 set timeoutlen=500
 
 "-----------------------------------------------------------------------
-" 1. vim related
+" vim related
 "-----------------------------------------------------------------------
 nmap <Leader>h :help <c-r>=expand("<cword>")<cr><cr>
 
@@ -26,7 +26,7 @@ nmap <leader>mc :set mouse&<CR>
 
 
 "-----------------------------------------------------------------------
-" 2. file related
+" file related
 "-----------------------------------------------------------------------
 " save with overwrite easily
 nmap <silent> <Leader>w :w!<cr>
@@ -53,14 +53,14 @@ vnoremap < <<CR>gv
 
 
 "-----------------------------------------------------------------------
-" 3. plugin related
+" plugin related
 "-----------------------------------------------------------------------
 " use <space> to toggle taglist window
 nmap <silent> <space> :Tlist<CR>
 
 
 "-----------------------------------------------------------------------
-" 4. useful mappings for file buffers
+" useful mappings for file buffers
 "-----------------------------------------------------------------------
 " move to next file
 map <LocalLeader>fn :next<cr>
@@ -85,7 +85,7 @@ map <LocalLeader>ba :1,1000 bd!<cr>
 
 
 "-----------------------------------------------------------------------
-" 5. useful mappings for tab page
+" useful mappings for tab page
 "-----------------------------------------------------------------------
 nmap <leader>tc :tabnew %<cr>
 nmap <leader>td :tabclose<cr>
@@ -109,7 +109,7 @@ nmap <leader>tn :tn<cr>
 
 
 "-----------------------------------------------------------------------
-" 6. quickfix mappings
+" quickfix mappings
 "-----------------------------------------------------------------------
 nmap <silent> <leader>cw :cw<cr>
 nmap <silent> <leader>cc :call QuickFix()<cr>
@@ -119,7 +119,7 @@ nmap <silent> <leader>cn :call NextFile()<CR>
 
 
 "-----------------------------------------------------------------------
-" 7. spelling checking
+" spelling checking
 "-----------------------------------------------------------------------
 " set default spelling language
 setlocal spelllang=en nospell
@@ -131,7 +131,7 @@ nmap <leader>s? z=
 
 
 "-----------------------------------------------------------------------
-" 8. vimgrep searching
+" vimgrep searching
 "-----------------------------------------------------------------------
 nmap <F6> :vimgrep /<C-R>=expand("<cword>")<cr>/ **/*.c **/*.h<cr><C-o>:cw<cr>
 
