@@ -28,3 +28,9 @@ nmap <silent> <Leader>w :w!<cr>
 " stop highlight, auto turned back on when using a search command
 nmap <silent> <leader><cr> :nohlsearch<cr>
 
+
+"-----------------------------------------------------------------------
+" 2. plugin related
+"-----------------------------------------------------------------------
+" use <space> to toggle taglist window
+nmap <silent> <space> :Tlist<CR>
