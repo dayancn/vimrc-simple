@@ -36,3 +36,28 @@ nmap <silent> <leader><cr> :nohlsearch<cr>
 "-----------------------------------------------------------------------
 " use <space> to toggle taglist window
 nmap <silent> <space> :Tlist<CR>
+
+
+"-----------------------------------------------------------------------
+" 3. useful mappings for file buffers
+"-----------------------------------------------------------------------
+" move to next file
+map <LocalLeader>fn :next<cr>
+
+" move to previous file
+map <LocalLeader>ff :previous<cr>
+
+" move to next buffer
+map <LocalLeader>bn :bn<cr>
+
+" move to previous buffer
+map <LocalLeader>bf :bp<cr>
+
+" list open buffers
+map <LocalLeader>bb :ls<cr>
+
+" close the current buffer
+map <LocalLeader>bd :Bclose<cr>
+
+" close all the buffers
+map <LocalLeader>ba :1,1000 bd!<cr>
