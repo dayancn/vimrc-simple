@@ -47,6 +47,10 @@ nmap <C-l> <C-W>l
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
+"move text but keep selected
+vnoremap > ><CR>gv
+vnoremap < <<CR>gv
+
 
 "-----------------------------------------------------------------------
 " 3. plugin related
@@ -161,3 +165,39 @@ noremap <leader>pp :setlocal paste!<cr>
 
 " remap VIM 0 to first non-blank character
 nmap 0 ^
+
+" forces (re)indentation of a block of code
+" nmap <F1> - reserved for vim help
+" nmap <F2> - reserved for used by vim plugin visualmark.vim
+nmap <F3> /<C-R>=expand("<cword>")<CR><CR>
+nmap <F4> ?<C-R>=expand("<cword>")<CR><CR>
+" nmap <F5> - reserved for vim lookupfile plugin
+" nmap <F6> - reserved for vimgrep
+" nmap <F7> - noused
+nmap <F8> vi"*n
+nmap <F9> vi"#N
+" nmap <F10> - reserved for guake
+" nmap <F11> - reserved for vim full screen
+" nmap <F12> - reserved for vim plugin visualmark.vim
+
+" compile switch
+nmap <leader>ca :!CC a<CR>
+nmap <leader>cb :!CC b<CR>
+nmap <leader>ck :!CC k<CR>
+
+
+" add debug hotkeys for c programming
+nmap <silent> <leader>1 ofshow(YELLOW "---------------\n");<ESC>0
+nmap <silent> <leader>2 yiwofshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
+nmap <silent> <leader>3 yiwOfshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
+nmap <silent> <leader>4 o#error "======>>>>>>)))))) PROGRAM CONTAINS THIS PATH !!!"<ESC>0
+nmap <silent> <leader>5 yiwo#pragma message(PRINT_MACRO(<ESC>pa))<ESC>0
+nmap <silent> <leader>6 yiwO#pragma message(PRINT_MACRO(<ESC>pa))<ESC>0
+nmap <silent> <leader>7 ofshow("%8p\n", __builtin_return_address(0));<ESC>0
+nmap <silent> <leader>8 oDBG_ENTERF;<ESC>0
+nmap <silent> <leader>9 oDBG_RETURN();<left><left>
+nmap <silent> <leader>0 oDBG_PRINTF;<ESC>0
+
+" add debug hotkeys for Makefile
+nmap <silent> <leader>m1 yiwo$(warning "==> [$(<ESC>pa)] <==")<ESC>0
+nmap <silent> <leader>m2 yiwo$(error   "==> [$(<ESC>pa)] <==")<ESC>0
