@@ -173,7 +173,7 @@ nmap <F3> /<C-R>=expand("<cword>")<CR><CR>
 nmap <F4> ?<C-R>=expand("<cword>")<CR><CR>
 " nmap <F5> - reserved for vim lookupfile plugin
 " nmap <F6> - reserved for vimgrep
-" nmap <F7> - noused
+nmap <F7> :call RunShell("Generating > ", "~/.vim/shell/lookfile.sh " . g:LookupFile_TagExpr)<cr>
 nmap <F8> vi"*n
 nmap <F9> vi"#N
 " nmap <F10> - reserved for guake

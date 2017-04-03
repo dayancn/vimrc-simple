@@ -122,3 +122,11 @@ function! OnlineDoc(search_engine)
 	execute  s:cmd
 	redraw!
 endfunction
+
+
+" for lookupfile
+function! RunShell(Msg, Shell)
+	echo a:Msg . g:LookupFile_TagExpr
+	call system(a:Shell)
+	echo 'Done'
+endfunction

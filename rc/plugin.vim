@@ -24,3 +24,21 @@ let Tlist_Exit_OnlyWindow = 1
 
 " use quickfix window to show the cscope commands results
 set cscopequickfix=s-,g-,d-,c-,t-,e-,f-,i-
+
+
+" ---------------------------------------------------------------------------
+" lookupfile setting
+" ---------------------------------------------------------------------------
+let g:LookupFile_MinPatLength=2
+let g:LookupFile_PreserveLastPattern=0
+let g:LookupFile_PreservePatternHistory=1
+let g:LookupFile_AlwaysAcceptFirst=1
+let g:LookupFile_AllowNewFiles=0
+
+if $PWD =~ $PROJ_ROOT_PATH
+	let g:LookupFile_TagExpr="\"" . $PROJ_ROOT_PATH . "/.lookupfile\""
+else
+	" TODO: make it can use ~/.lookupfile!
+	" let g:LookupFile_TagExpr="\"" . $HOME. "/.lookupfile\""
+	let g:LookupFile_TagExpr='".lookupfile"'
+endif
