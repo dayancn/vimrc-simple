@@ -7,3 +7,4 @@ source ~/.vim/rc/basic.vim
 source ~/.vim/rc/mapping.vim
 source ~/.vim/rc/mywork.vim
 source ~/.vim/rc/plugin.vim
+source ~/.vim/rc/vimlib.vim
