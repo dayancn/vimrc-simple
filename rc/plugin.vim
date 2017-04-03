@@ -85,3 +85,36 @@ let g:acp_enableAtStartup = 0
 " supertab
 "-----------------------------------------------------------------------
 let loaded_supertab = 1
+
+
+"-----------------------------------------------------------------------
+" colorscheme
+"-----------------------------------------------------------------------
+" set extra options when running in GUI mode
+if has("gui_running")
+	set t_Co=256
+	set background=dark
+
+	" set font according to system
+	set guifont=Monospace\ 10
+
+	" disable scrollbars
+	set guioptions-=r
+	set guioptions-=R
+	set guioptions-=l
+	set guioptions-=L
+	set guioptions-=T
+	set guioptions-=e
+	set guioptions+=c
+
+	"set guitablabel=%M\ %t
+	let g:solarized_degrade=1
+	colorscheme solarized
+else
+	set t_Co=256
+	set background=dark
+	"set background=light
+
+	let g:solarized_termcolors=256
+	colorscheme solarized
+endif
