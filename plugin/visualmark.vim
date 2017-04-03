@@ -20,26 +20,25 @@ endif
 if &bg == "dark"
  highlight SignColor ctermfg=white ctermbg=blue guifg=white guibg=RoyalBlue3
 else
- highlight SignColor ctermbg=white ctermfg=blue guibg=grey guifg=RoyalBlue3
+ highlight SignColor ctermfg=blue ctermbg=white guifg=RoyalBlue3 guibg=grey
 endif
 
 " ---------------------------------------------------------------------
 "  Public Interface:
 if !hasmapto('<Plug>Vm_toggle_sign')
-  map <unique> <c-F2> <Plug>Vm_toggle_sign
   map <silent> <unique> mm <Plug>Vm_toggle_sign
 endif
-nnoremap <silent> <script> <Plug>Vm_toggle_sign	:call Vm_toggle_sign()<cr>
+nnoremap <silent> <script> <Plug>Vm_toggle_sign :call Vm_toggle_sign()<cr>
 
 if !hasmapto('<Plug>Vm_goto_next_sign')
   map <unique> <F2> <Plug>Vm_goto_next_sign
 endif
-nnoremap <silent> <script> <Plug>Vm_goto_next_sign	:call Vm_goto_next_sign()<cr>
+nnoremap <silent> <script> <Plug>Vm_goto_next_sign :call Vm_goto_next_sign()<cr>
 
 if !hasmapto('<Plug>Vm_goto_prev_sign')
-  map <unique> <s-F2> <Plug>Vm_goto_prev_sign
+  map <unique> <F12> <Plug>Vm_goto_prev_sign
 endif
-nnoremap <silent> <script> <Plug>Vm_goto_prev_sign	:call Vm_goto_prev_sign()<cr>
+nnoremap <silent> <script> <Plug>Vm_goto_prev_sign :call Vm_goto_prev_sign()<cr>
 
 " ---------------------------------------------------------------------
 "  GetVimCmdOutput:
@@ -52,7 +51,7 @@ fun! s:GetVimCmdOutput(cmd)
   let old_lang = v:lang
 
   " Set the language to English
-  exec ":lan mes en_US"
+  exec ":lan mes en_US.utf8"
 
   let v:errmsg = ''
   let output   = ''
@@ -89,7 +88,7 @@ fun! s:Vm_place_sign()
 
   let ln = line(".")
 
-  exe 'sign define SignSymbol linehl=SignColor texthl=SignColor'
+  exe 'sign define SignSymbol linehl=SignColor texthl=SignColor text=>>'
   exe 'sign place ' . b:Vm_sign_number . ' line=' . ln . ' name=SignSymbol buffer=' . winbufnr(0)
 
   let vsn              = b:Vm_sign_number
