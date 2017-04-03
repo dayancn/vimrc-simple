@@ -12,6 +12,8 @@ let g:mapleader = ","
 let maplocalleader='\'
 let g:maplocalleader='\'
 
+" The time in milliseconds that is waited for a key code or mapped key sequence to complete.
+set timeoutlen=500
 
 "-----------------------------------------------------------------------
 " 1. vim related
