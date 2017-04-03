@@ -180,6 +180,14 @@ nmap <leader>o :BufExplorer<cr>
 
 
 "-----------------------------------------------------------------------
+" nerdtree mappings
+"-----------------------------------------------------------------------
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark
+map <leader>nf :NERDTreeFind<cr>
+
+
+"-----------------------------------------------------------------------
 " other mappings
 "-----------------------------------------------------------------------
 " Remove the Windows ^M - when the encodings gets messed up
