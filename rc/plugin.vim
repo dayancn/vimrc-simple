@@ -28,6 +28,15 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 
 
 "-----------------------------------------------------------------------
+" bufExplorer
+"-----------------------------------------------------------------------
+let g:bufExplorerDefaultHelp=0
+let g:bufExplorerShowRelativePath=1
+let g:bufExplorerFindActive=1
+let g:bufExplorerSortBy='name'
+
+
+"-----------------------------------------------------------------------
 " taglist.vim
 "-----------------------------------------------------------------------
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
