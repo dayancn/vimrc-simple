@@ -5,3 +5,4 @@
 
 source ~/.vim/rc/basic.vim
 source ~/.vim/rc/mapping.vim
+source ~/.vim/rc/mywork.vim
