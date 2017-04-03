@@ -59,3 +59,22 @@ set iskeyword=a-z,A-Z,48-57,_,.,-,>
 
 " enable filetype detection plugins
 filetype plugin indent on
+
+
+"-----------------------------------------------------------------------
+" 2. autocmd
+"-----------------------------------------------------------------------
+if has("autocmd")
+	augroup VimGroup
+		autocmd!
+		autocmd BufWritePost ~/.vim/rc/*.vim source ~/.vim/vimrc
+	augroup END
+
+	augroup LinuxGroup
+		autocmd!
+		" return to last edit position after re-opening files
+		autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+		" don't write swapfile on most commonly used directories for NFS mounts or USB sticks
+		autocmd BufNewFile,BufReadPre /media/*,/mnt/* set directory=/tmp,/var/tmp
+	augroup END
+endif
