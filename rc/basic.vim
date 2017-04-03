@@ -33,4 +33,29 @@ set noswapfile
 " add ~ to the end of backup files
 " set backupext=~
 
+" show line number
+set number
 
+" highlight the cusor-located line
+set cursorline
+
+" highlight search results
+set hlsearch
+
+" as it was typed so far, the matched string is highlighted.
+set incsearch
+
+" auto read it again when changed outside
+set autoread
+
+" don't auto write on :next, etc
+set noautowrite
+
+" \K to get help info in split window
+runtime! ftplugin/man.vim
+
+" set keyword chars
+set iskeyword=a-z,A-Z,48-57,_,.,-,>
+
+" enable filetype detection plugins
+filetype plugin indent on
