@@ -7,7 +7,7 @@
 "-----------------------------------------------------------------------
 " extend runtimepath with pathogen
 "-----------------------------------------------------------------------
-call pathogen#infect('customized/{}')
+call pathogen#infect('~/.vim/customized')
 call pathogen#helptags()
 
 
