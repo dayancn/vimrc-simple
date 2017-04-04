@@ -18,9 +18,9 @@ if !has("signs")
 endif
 
 if &bg == "dark"
- highlight SignColor ctermfg=white ctermbg=blue guifg=white guibg=RoyalBlue3
+ highlight SignColor ctermfg=Black ctermbg=Cyan guibg=RoyalBlue3 guifg=Cyan
 else
- highlight SignColor ctermfg=blue ctermbg=white guifg=RoyalBlue3 guibg=grey
+ highlight SignColor ctermfg=Black ctermbg=Cyan guibg=RoyalBlue3 guifg=Cyan
 endif
 
 " ---------------------------------------------------------------------
