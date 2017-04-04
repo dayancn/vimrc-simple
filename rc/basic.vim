@@ -120,7 +120,7 @@ set t_vb=
 set lazyredraw
 
 " always show tab page labels
-set showtabline=2
+" set showtabline=2
 
 " specify the behavior when switching between buffers
 "set switchbuf=useopen,usetab,newtab
