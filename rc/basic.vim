@@ -46,7 +46,7 @@ set number
 set cursorline
 
 " set keyword chars
-set iskeyword=a-z,A-Z,48-57,_,.,-,>
+set iskeyword=a-z,A-Z,48-57,_,.,-
 
 " some chars preceded with a \ will get a special meaning.
 set magic
