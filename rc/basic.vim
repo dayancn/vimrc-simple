@@ -119,6 +119,9 @@ set t_vb=
 " don't redraw while executing macros registers and other commands that have not been typed.
 set lazyredraw
 
+" always show status line for the last window
+set laststatus=2
+
 " always show tab page labels
 " set showtabline=2
 
