@@ -7,7 +7,8 @@
 "-----------------------------------------------------------------------
 " extend runtimepath with pathogen
 "-----------------------------------------------------------------------
-call pathogen#infect('~/.vim/customized')
+let s:vimrc = expand('<sfile>:p:h')."/.."
+call pathogen#infect(s:vimrc.'/customized/{}')
 call pathogen#helptags()
 
 
