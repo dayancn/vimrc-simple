@@ -54,8 +54,10 @@ let Tlist_Exit_OnlyWindow = 1
 " use :cstag instead of the default :tag behavior
 "set cscopetag
 
-" use quickfix window to show the cscope commands results
-set cscopequickfix=s-,g-,d-,c-,t-,e-,f-,i-
+" this option specifies whether to use quickfix window to show cscope results.
+" if the command is added to this list, the more window will not popup, they
+" are mutual!
+" set cscopequickfix=s-,g-,d-,c-,t-,e-,f-,i-
 
 
 "-----------------------------------------------------------------------
