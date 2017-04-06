@@ -3,8 +3,10 @@
 " Description: This file is the customized vimrc entry point.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-source ~/.vim/rc/basic.vim
-source ~/.vim/rc/mapping.vim
-source ~/.vim/rc/mywork.vim
-source ~/.vim/rc/plugin.vim
-source ~/.vim/rc/vimlib.vim
+set runtimepath+=~/.vim_rain
+
+source ~/.vim_rain/rc/basic.vim
+source ~/.vim_rain/rc/mapping.vim
+source ~/.vim_rain/rc/mywork.vim
+source ~/.vim_rain/rc/plugin.vim
+source ~/.vim_rain/rc/vimlib.vim

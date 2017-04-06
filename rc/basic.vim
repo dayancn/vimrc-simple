@@ -20,8 +20,8 @@ set viminfo='100,<1000
 " remember info about open buffers on close
 set viminfo^=%
 
-" set undodir position and turn on undo function(must 'mkdir ~/.vim/.undodir' first).
-set undodir=~/.vim/.undodir
+" set undodir position and turn on undo function(must 'mkdir ~/.vim_rain/.undodir' first).
+set undodir=~/.vim_rain/.undodir
 set undofile
 
 " turn off backup off
@@ -200,7 +200,7 @@ if has("autocmd")
 		" don't write swapfile on most commonly used directories for NFS mounts or USB sticks
 		autocmd BufNewFile,BufReadPre /media/*,/mnt/* set directory=/tmp,/var/tmp
 		" start with spec file template
-		autocmd BufEnter *.c,*.h,*.cpp,*.hpp,*.cc source ~/.vim/syntax/c.vim
+		autocmd BufEnter *.c,*.h,*.cpp,*.hpp,*.cc source ~/.vim_rain/syntax/c.vim
 		" delete trailing white space on save
 		" autocmd BufWrite * :call DeleteTrailingWhiteSpace()
 		autocmd BufWrite \w\+ :call DeleteTrailingWhiteSpace()
