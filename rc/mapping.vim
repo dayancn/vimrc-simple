@@ -223,10 +223,11 @@ nmap <leader>ck :!CC k<CR>
 
 
 " add debug hotkeys for c programming
-nmap <silent> <leader>1 ofshow(YELLOW "---------------\n");<ESC>0
-nmap <silent> <leader>2 yiwofshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
-nmap <silent> <leader>3 yiwOfshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
-nmap <silent> <leader>4 o#error "======>>>>>>)))))) PROGRAM CONTAINS THIS PATH !!!"<ESC>0
+nmap <silent> <leader>` o#error "======>>>>>>)))))) PROGRAM CONTAINS THIS PATH !!!"<ESC>0
+nmap <silent> <leader>1 Ofshow(YELLOW "---------------\n");<ESC>0
+nmap <silent> <leader>2 Ofshow(YELLOW "---------------\n");<ESC>0
+nmap <silent> <leader>3 yiwofshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
+nmap <silent> <leader>4 yiwOfshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
 nmap <silent> <leader>5 yiwo#pragma message(PRINT_MACRO(<ESC>pa))<ESC>0
 nmap <silent> <leader>6 yiwO#pragma message(PRINT_MACRO(<ESC>pa))<ESC>0
 nmap <silent> <leader>7 ofshow("%8p\n", __builtin_return_address(0));<ESC>0
