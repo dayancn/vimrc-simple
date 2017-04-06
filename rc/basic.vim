@@ -131,6 +131,14 @@ set laststatus=2
 " name of the shell to use for ! and :! commands.
 set shell=/bin/bash
 
+" minimal number of screen lines to keep above and below the cursor,
+" when moving vertically using j/k
+set scrolloff=6
+
+" The minimal number of screen columns to keep to the left and to the right of
+" the cursor if 'nowrap' is set.
+set sidescrolloff=6
+
 
 "-----------------------------------------------------------------------
 " 3. advanced programming related settings
@@ -156,6 +164,16 @@ set smartindent
 " set foldmethod=indent
 " set foldclose=all
 " set foldcolumn=4
+
+" command <TAB> completion, list matches and complete the longest common part
+"set wildchar=<Esc>
+"set wildmode=list:longest,full
+
+" turn on the wiLd menu, menu has tab completion, etc
+set wildmenu
+
+" set list
+set listchars=tab:>-,trail:-
 
 " a file that matches with one of these patterns is ignored when expanding
 " wildcards, completing file or directory names, and influences the result of
