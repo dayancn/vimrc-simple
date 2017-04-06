@@ -193,9 +193,6 @@ map <leader>nf :NERDTreeFind<cr>
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-" open a buffer for scribble
-noremap <leader>q :e ~/.scribble<cr>
-
 " toggle paste mode on and off
 noremap <leader>pp :setlocal paste!<cr>
 
