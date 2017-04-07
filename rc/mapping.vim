@@ -58,6 +58,11 @@ vnoremap < <<CR>gv
 " use <space> to toggle taglist window
 nmap <silent> <space> :Tlist<CR>
 
+" YankStack
+"nmap <Leader>y :Yanks<CR>
+"noremap <c-p> <Plug>yankstack_substitute_older_paste
+"noremap <c-n> <Plug>yankstack_substitute_newer_paste
+
 
 "-----------------------------------------------------------------------
 " useful mappings for file buffers

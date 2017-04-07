@@ -13,6 +13,12 @@ call pathogen#helptags()
 
 
 "-----------------------------------------------------------------------
+" YankRing.vim
+"-----------------------------------------------------------------------
+let g:yankring_history_dir='~/.vim_rain/'
+
+
+"-----------------------------------------------------------------------
 " MRU
 "-----------------------------------------------------------------------
 let MRU_Max_Entries = 500
@@ -232,5 +238,6 @@ else
 	"set background=light
 
 	let g:solarized_termcolors=256
-	colorscheme peaksea
+	"colorscheme peaksea
+	colorscheme solarized
 endif
