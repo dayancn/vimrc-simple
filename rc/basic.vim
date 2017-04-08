@@ -208,7 +208,7 @@ set completeopt=longest,menu
 if has("autocmd")
 	augroup VimGroup
 		autocmd!
-		autocmd BufWritePost ~/.vim/rc/*.vim source ~/.vim/vimrc
+		autocmd BufWritePost ~/.vim_rain/rc/*.vim source ~/.vim_rain/vimrc
 	augroup END
 
 	augroup LinuxGroup
