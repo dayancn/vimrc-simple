@@ -3,6 +3,8 @@
 " Description: This file is the customized vimrc entry point.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set runtimepath-=~/.vim
+set runtimepath-=~/.vim/after
 set runtimepath+=~/.vim_rain
 
 source ~/.vim_rain/rc/basic.vim
