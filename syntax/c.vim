@@ -1,13 +1,19 @@
 " useful for arranging a block of comments
 " nmap <C-J> vip=
 
-
-syn match ErrorLeadSpace  /^ \+/            " highlight any leading spaces
-syn match ErrorTailSpace  /\s\+$/           " highlight any trailing spaces
+syn match ErrorLeadSpace /^ \+/       " highlight any leading spaces
+syn match ErrorTailSpace /\s\+$/      " highlight any trailing spaces
 syn match cErrorTailSpace /\s\+$/ contained " highlight any trailing spaces
-"syn match Error80         /\%>80v.\+/      " highlight anything past 80 in red
+"syn match Error80        /\%>80v.\+/ " highlight anything past 80 in red
+
+" more types...
+syn keyword cType uint ubyte ulong uint64_t uint32_t uint16_t uint8_t boolean_t int64_t int32_t int16_t int8_t u_int64_t u_int32_t u_int16_t u_int8_t
+" fsap2/pthreads/osxstd.h
+syn keyword cType BOOLEAN BOOL1 CHR1 INT1 UINT1 BYTE VOID INT2 UINT2 INT4 UINT4 FLT4 DBL8 FS_ULONG FS_LONG AR_UINT8 VINT1 VUINT1 VINT2 VUINT2 VINT4 VUINT4
+syn keyword cOperator likely unlikely
 
 
+" process only once
 if exists("my_vim_c_vim_loaded") || &compatible
 	finish
 else
@@ -26,13 +32,6 @@ else
 	hi ErrorTailSpace  cterm=NONE ctermfg=7 ctermbg=1
 	hi cErrorTailSpace cterm=NONE ctermfg=7 ctermbg=1
 endif
-
-
-" more types...
-syn keyword cType uint ubyte ulong uint64_t uint32_t uint16_t uint8_t boolean_t int64_t int32_t int16_t int8_t u_int64_t u_int32_t u_int16_t u_int8_t
-" fsap2/pthreads/osxstd.h
-syn keyword cType BOOLEAN BOOL1 CHR1 INT1 UINT1 BYTE VOID INT2 UINT2 INT4 UINT4 FLT4 DBL8 FS_ULONG FS_LONG AR_UINT8 VINT1 VUINT1 VINT2 VUINT2 VINT4 VUINT4
-syn keyword cOperator likely unlikely
 
 
 " setup tabstops to 8 and indents to 8
