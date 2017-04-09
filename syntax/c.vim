@@ -1,11 +1,6 @@
 " useful for arranging a block of comments
 " nmap <C-J> vip=
 
-syn match ErrorLeadSpace /^ \+/       " highlight any leading spaces
-syn match ErrorTailSpace /\s\+$/      " highlight any trailing spaces
-syn match cErrorTailSpace /\s\+$/ contained " highlight any trailing spaces
-"syn match Error80        /\%>80v.\+/ " highlight anything past 80 in red
-
 " more types...
 syn keyword cType uint ubyte ulong uint64_t uint32_t uint16_t uint8_t boolean_t int64_t int32_t int16_t int8_t u_int64_t u_int32_t u_int16_t u_int8_t
 " fsap2/pthreads/osxstd.h
@@ -19,6 +14,12 @@ if exists("my_vim_c_vim_loaded") || &compatible
 else
 	let my_vim_c_vim_loaded = 1
 endif
+
+
+syn match ErrorLeadSpace /^ \+/       " highlight any leading spaces
+syn match ErrorTailSpace /\s\+$/      " highlight any trailing spaces
+syn match cErrorTailSpace /\s\+$/ contained " highlight any trailing spaces
+"syn match Error80        /\%>80v.\+/ " highlight anything past 80 in red
 
 
 if has("gui_running")
@@ -81,11 +82,9 @@ set cinoptions=:0,l1,t0,g0,+10,(0,+s    " Linux Kernel CodingStyle
 "  - reserve 4 columns on the left for folding tree
 "  - fold by syntax, use {}'s
 "  - start with all folds open
-if winwidth(0) > 80
-	" set foldcolumn=4
-endif
-
-
+"if winwidth(0) > 80
+"	set foldcolumn=4
+"endif
 "set fdm=syntax
 "syn region myFold start="{" end="}" transparent fold
 "%foldopen!
@@ -97,41 +96,45 @@ endif
 " next block is from chapter 10 of the windows.txt vim help file
 " :h preview-window
 "
+" Rain Note: preview window may conflict with cscopequickfix settings!
+" set cscopequickfix=s-,g-,d-,c-,t-,e-,f-,i- " not work
+" set cscopequickfix=s-,c-,d-,i-,t-,e- " work
+func PreviewWord()
+	if &previewwindow               " don't do this in the preview window
+		return
+	endif
+	let w = expand("<cword>")       " get the word under cursor
+	if w =~ '\a'                    " if the word contains a letter
+
+		" Delete any existing highlight before showing another tag
+		silent! wincmd P        " jump to preview window
+		if &previewwindow       " if we really get there...
+			match none      " delete existing highlight
+			wincmd p        " back to old window
+		endif
+
+		" Try displaying a matching tag for the word under the cursor
+		try
+			exe "ptag! " . w
+		catch
+			return
+		endtry
+
+		silent! wincmd P        " jump to preview window
+		if &previewwindow       " if we really get there...
+			if has("folding")
+				silent! .foldopen       " don't want a closed fold
+			endif
+			call search("$", "b")           " to end of previous line
+			let w = substitute(w, '\\', '\\\\', "")
+			call search('\<\V' . w . '\>')  " position cursor on match
+			" Add a match highlight to the word at this position
+			hi previewWord term=bold ctermbg=green guibg=green
+			exe 'match previewWord "\%' . line(".") . 'l\%' . col(".") . 'c\k*"'
+			wincmd p                        " back to old window
+		endif
+	endif
+endfun
+
+"nmap <LocalLeader>p :call PreviewWord()<cr>
 ":au! CursorHold *.[ch] nested call PreviewWord()
-:nmap <LocalLeader>pt :call PreviewWord()<cr>
-:func PreviewWord()
-:	if &previewwindow                  " don't do this in the preview window
-:		return
-:	endif
-:	let w = expand("<cword>")          " get the word under cursor
-:	if w =~ '\a'                       " if the word contains a letter
-:
-:		" Delete any existing highlight before showing another tag
-:		silent! wincmd P           " jump to preview window
-:		if &previewwindow          " if we really get there...
-:			match none         " delete existing highlight
-:			wincmd p           " back to old window
-:		endif
-:
-:		" Try displaying a matching tag for the word under the cursor
-:		try
-:			exe "ptag! " . w
-:		catch
-:			return
-:		endtry
-:
-:		silent! wincmd P           " jump to preview window
-:		if &previewwindow          " if we really get there...
-:			if has("folding")
-:				silent! .foldopen      " don't want a closed fold
-:			endif
-:			call search("$", "b")          " to end of previous line
-:			let w = substitute(w, '\\', '\\\\', "")
-:			call search('\<\V' . w . '\>') " position cursor on match
-:			" Add a match highlight to the word at this position
-:			hi previewWord term=bold ctermbg=green guibg=green
-:			exe 'match previewWord "\%' . line(".") . 'l\%' . col(".") . 'c\k*"'
-:			wincmd p                       " back to old window
-:		endif
-:	endif
-:endfun
