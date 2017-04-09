@@ -231,13 +231,14 @@ if has("gui_running")
 
 	"set guitablabel=%M\ %t
 	let g:solarized_degrade=1
-	colorscheme solarized
+	"colorscheme solarized
+	colorscheme peaksea
 else
 	set t_Co=256
 	set background=dark
 	"set background=light
 
 	let g:solarized_termcolors=256
-	"colorscheme peaksea
-	colorscheme solarized
+	"colorscheme solarized
+	colorscheme peaksea
 endif
