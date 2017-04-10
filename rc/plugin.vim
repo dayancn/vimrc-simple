@@ -31,7 +31,12 @@ let MRU_Window_Height = 15
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_map = '<c-f>'
 let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+let g:ctrlp_custom_ignore = {
+			\ 'dir':  '\.(git|hg|svn)$',
+			\ 'file': '\.[ado]',
+			\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+			\ }
+let g:ctrlp_extensions = ['dir', 'changes']
 
 
 "-----------------------------------------------------------------------
