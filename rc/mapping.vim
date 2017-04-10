@@ -68,25 +68,25 @@ nmap <silent> <space> :Tlist<CR>
 " useful mappings for file buffers
 "-----------------------------------------------------------------------
 " move to next file
-map <LocalLeader>fn :next<cr>
+nnoremap <LocalLeader>fn :next<cr>
 
 " move to previous file
-map <LocalLeader>ff :previous<cr>
+nnoremap <LocalLeader>ff :previous<cr>
 
 " move to next buffer
-map <LocalLeader>bn :bn<cr>
+nnoremap <LocalLeader>bn :bn<cr>
 
 " move to previous buffer
-map <LocalLeader>bf :bp<cr>
+nnoremap <LocalLeader>bf :bp<cr>
 
 " list open buffers
-map <LocalLeader>bb :ls<cr>
+nnoremap <LocalLeader>bb :ls<cr>
 
 " close the current buffer
-map <LocalLeader>bd :Bclose<cr>
+nnoremap <LocalLeader>bd :Bclose<cr>
 
 " close all the buffers
-map <LocalLeader>ba :1,1000 bd!<cr>
+nnoremap <LocalLeader>ba :1,1000 bd!<cr>
 
 
 "-----------------------------------------------------------------------
@@ -157,13 +157,13 @@ vnoremap <silent> <Leader>r :call VisualSelection('replace', '')<CR>
 " search on-line mappings
 "-----------------------------------------------------------------------
 " www.baidu.com
-map <Leader>a :call OnlineDoc(1)<CR>
+nmap <Leader>a :call OnlineDoc(1)<CR>
 " www.bing.com
-map <Leader>b :call OnlineDoc(2)<CR>
+nmap <Leader>b :call OnlineDoc(2)<CR>
 " dict.cn
-map <Leader>c :call OnlineDoc(3)<CR>
+nmap <Leader>c :call OnlineDoc(3)<CR>
 " www.iciba.com
-map <Leader>e :call OnlineDoc(4)<CR>
+nmap <Leader>e :call OnlineDoc(4)<CR>
 
 
 "-----------------------------------------------------------------------
@@ -181,9 +181,9 @@ nmap <Leader>o :BufExplorer<cr>
 "-----------------------------------------------------------------------
 " nerdtree mappings
 "-----------------------------------------------------------------------
-map <Leader>nn :NERDTreeToggle<cr>
-map <Leader>nb :NERDTreeFromBookmark
-map <Leader>nf :NERDTreeFind<cr>
+nmap <Leader>nn :NERDTreeToggle<cr>
+nmap <Leader>nb :NERDTreeFromBookmark
+nmap <Leader>nf :NERDTreeFind<cr>
 
 
 "-----------------------------------------------------------------------
