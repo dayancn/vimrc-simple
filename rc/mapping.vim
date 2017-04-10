@@ -136,6 +136,19 @@ nmap <Leader>s? z=
 
 
 "-----------------------------------------------------------------------
+" search on-line mappings
+"-----------------------------------------------------------------------
+" www.baidu.com
+nmap <Leader>a :call OnlineDoc(1)<CR>
+" www.bing.com
+nmap <Leader>b :call OnlineDoc(2)<CR>
+" dict.cn
+nmap <Leader>c :call OnlineDoc(3)<CR>
+" www.iciba.com
+nmap <Leader>e :call OnlineDoc(4)<CR>
+
+
+"-----------------------------------------------------------------------
 " vimgrep searching
 "-----------------------------------------------------------------------
 nmap <F6> :vimgrep /<C-R>=expand("<cword>")<cr>/ **/*.c **/*.h<cr><C-o>:cw<cr>
@@ -154,19 +167,6 @@ vnoremap <silent> <Leader>r :call VisualSelection('replace', '')<CR>
 
 
 "-----------------------------------------------------------------------
-" search on-line mappings
-"-----------------------------------------------------------------------
-" www.baidu.com
-nmap <Leader>a :call OnlineDoc(1)<CR>
-" www.bing.com
-nmap <Leader>b :call OnlineDoc(2)<CR>
-" dict.cn
-nmap <Leader>c :call OnlineDoc(3)<CR>
-" www.iciba.com
-nmap <Leader>e :call OnlineDoc(4)<CR>
-
-
-"-----------------------------------------------------------------------
 " MRU
 "-----------------------------------------------------------------------
 nmap <Leader>f :MRU<CR>
@@ -182,7 +182,6 @@ nmap <Leader>o :BufExplorer<cr>
 " nerdtree mappings
 "-----------------------------------------------------------------------
 nmap <Leader>nn :NERDTreeToggle<cr>
-nmap <Leader>nb :NERDTreeFromBookmark
 nmap <Leader>nf :NERDTreeFind<cr>
 
 
