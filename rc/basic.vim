@@ -179,6 +179,7 @@ set listchars=tab:>-,trail:-
 " wildcards, completing file or directory names, and influences the result of
 " expand(), glob() and globpath() unless a flag is passed to disable this.
 set wildignore=*~,*.pyc,*.o,*.obj,*.swp
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " show filler lines and ignore all whitespace when vimdiff
 set diffopt=filler,iwhite
