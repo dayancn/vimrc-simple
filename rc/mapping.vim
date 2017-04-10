@@ -21,8 +21,8 @@ set timeoutlen=500
 nmap <Leader>h :help <c-r>=expand("<cword>")<cr><cr>
 
 " open or close mouse mode
-nmap <leader>ma :set mouse=a<CR>
-nmap <leader>mc :set mouse&<CR>
+nmap <Leader>ma :set mouse=a<CR>
+nmap <Leader>mc :set mouse&<CR>
 
 
 "-----------------------------------------------------------------------
@@ -32,7 +32,7 @@ nmap <leader>mc :set mouse&<CR>
 nmap <silent> <Leader>w :w!<cr>
 
 " stop highlight, auto turned back on when using a search command
-nmap <silent> <leader><cr> :nohlsearch<cr>
+nmap <silent> <Leader><cr> :nohlsearch<cr>
 
 " make j/k treat long lines as break lines
 nmap j gj
@@ -92,35 +92,35 @@ map <LocalLeader>ba :1,1000 bd!<cr>
 "-----------------------------------------------------------------------
 " useful mappings for tab page
 "-----------------------------------------------------------------------
-nmap <leader>tc :tabnew %<cr>
-nmap <leader>td :tabclose<cr>
-nmap <leader>th :tab help<cr>
+nmap <Leader>tc :tabnew %<cr>
+nmap <Leader>td :tabclose<cr>
+nmap <Leader>th :tab help<cr>
 
 " opens a new tab with the current buffer's path
-nmap <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+nmap <Leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " switch CWD to the directory of the open buffer
-nmap <leader>cd :cd %:p:h<cr>:pwd<cr>
+nmap <Leader>cd :cd %:p:h<cr>:pwd<cr>
 
 
 "-----------------------------------------------------------------------
 " tags related mappings
 "-----------------------------------------------------------------------
-nmap <leader>ts :ts <C-R>=expand("<cword>")<cr><cr>
-nmap <leader>tt :ts<cr>
-nmap <leader>tp :tp<cr>
-nmap <leader>tf :tp<cr>
-nmap <leader>tn :tn<cr>
+nmap <Leader>ts :ts <C-R>=expand("<cword>")<cr><cr>
+nmap <Leader>tt :ts<cr>
+nmap <Leader>tp :tp<cr>
+nmap <Leader>tf :tp<cr>
+nmap <Leader>tn :tn<cr>
 
 
 "-----------------------------------------------------------------------
 " quickfix mappings
 "-----------------------------------------------------------------------
-nmap <silent> <leader>cw :cw<cr>
-nmap <silent> <leader>cc :call QuickFix()<cr>
-nmap <silent> <leader>cp ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
-nmap <silent> <leader>cf :call PrevFile()<CR>
-nmap <silent> <leader>cn :call NextFile()<CR>
+nmap <silent> <Leader>cw :cw<cr>
+nmap <silent> <Leader>cc :call QuickFix()<cr>
+nmap <silent> <Leader>cp ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
+nmap <silent> <Leader>cf :call PrevFile()<CR>
+nmap <silent> <Leader>cn :call NextFile()<CR>
 
 
 "-----------------------------------------------------------------------
@@ -128,11 +128,11 @@ nmap <silent> <leader>cn :call NextFile()<CR>
 "-----------------------------------------------------------------------
 " set default spelling language
 setlocal spelllang=en nospell
-nmap <leader>ss :setlocal spell!<cr>
-nmap <leader>sn ]s
-nmap <leader>sp [s
-nmap <leader>sa zg
-nmap <leader>s? z=
+nmap <Leader>ss :setlocal spell!<cr>
+nmap <Leader>sn ]s
+nmap <Leader>sp [s
+nmap <Leader>sa zg
+nmap <Leader>s? z=
 
 
 "-----------------------------------------------------------------------
@@ -141,49 +141,49 @@ nmap <leader>s? z=
 nmap <F6> :vimgrep /<C-R>=expand("<cword>")<cr>/ **/*.c **/*.h<cr><C-o>:cw<cr>
 
 " Vimgreps in the current file
-nmap <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
+nmap <Leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
 
 " Open vimgrep and put the cursor in the right position
-nnoremap <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+nnoremap <Leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
 
 " When you press gv you vimgrep after the selected text
-vnoremap <silent> <leader>g :call VisualSelection('gv', '')<CR>
+vnoremap <silent> <Leader>g :call VisualSelection('gv', '')<CR>
 
-" When you press <leader>r you can search and replace the selected text
-vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
+" When you press <Leader>r you can search and replace the selected text
+vnoremap <silent> <Leader>r :call VisualSelection('replace', '')<CR>
 
 
 "-----------------------------------------------------------------------
 " search on-line mappings
 "-----------------------------------------------------------------------
 " www.baidu.com
-map <leader>a :call OnlineDoc(1)<CR>
+map <Leader>a :call OnlineDoc(1)<CR>
 " www.bing.com
-map <leader>b :call OnlineDoc(2)<CR>
+map <Leader>b :call OnlineDoc(2)<CR>
 " dict.cn
-map <leader>c :call OnlineDoc(3)<CR>
+map <Leader>c :call OnlineDoc(3)<CR>
 " www.iciba.com
-map <leader>e :call OnlineDoc(4)<CR>
+map <Leader>e :call OnlineDoc(4)<CR>
 
 
 "-----------------------------------------------------------------------
 " MRU
 "-----------------------------------------------------------------------
-nmap <leader>f :MRU<CR>
+nmap <Leader>f :MRU<CR>
 
 
 "-----------------------------------------------------------------------
 " bufExplorer
 "-----------------------------------------------------------------------
-nmap <leader>o :BufExplorer<cr>
+nmap <Leader>o :BufExplorer<cr>
 
 
 "-----------------------------------------------------------------------
 " nerdtree mappings
 "-----------------------------------------------------------------------
-map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark
-map <leader>nf :NERDTreeFind<cr>
+map <Leader>nn :NERDTreeToggle<cr>
+map <Leader>nb :NERDTreeFromBookmark
+map <Leader>nf :NERDTreeFind<cr>
 
 
 "-----------------------------------------------------------------------
@@ -193,7 +193,7 @@ map <leader>nf :NERDTreeFind<cr>
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " toggle paste mode on and off
-noremap <leader>pp :setlocal paste!<cr>
+noremap <Leader>pp :setlocal paste!<cr>
 
 " remap VIM 0 to first non-blank character
 nmap 0 ^
@@ -213,24 +213,24 @@ nmap <F9> vi"#N
 " nmap <F12> - reserved for vim plugin visualmark.vim
 
 " compile switch
-nmap <leader>ca :!CC a<CR>
-nmap <leader>cb :!CC b<CR>
-nmap <leader>ck :!CC k<CR>
+nmap <Leader>ca :!CC a<CR>
+nmap <Leader>cb :!CC b<CR>
+nmap <Leader>ck :!CC k<CR>
 
 
 " add debug hotkeys for c programming
-nmap <silent> <leader>` o#error "======>>>>>>)))))) PROGRAM CONTAINS THIS PATH !!!"<ESC>0
-nmap <silent> <leader>1 Ofshow(YELLOW "---------------\n");<ESC>0
-nmap <silent> <leader>2 Ofshow(YELLOW "---------------\n");<ESC>0
-nmap <silent> <leader>3 yiwofshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
-nmap <silent> <leader>4 yiwOfshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
-nmap <silent> <leader>5 yiwo#pragma message(PRINT_MACRO(<ESC>pa))<ESC>0
-nmap <silent> <leader>6 yiwO#pragma message(PRINT_MACRO(<ESC>pa))<ESC>0
-nmap <silent> <leader>7 ofshow("%8p\n", __builtin_return_address(0));<ESC>0
-nmap <silent> <leader>8 oDBG_ENTERF;<ESC>0
-nmap <silent> <leader>9 oDBG_RETURN();<left><left>
-nmap <silent> <leader>0 oDBG_PRINTF;<ESC>0
+nmap <silent> <Leader>` o#error "======>>>>>>)))))) PROGRAM CONTAINS THIS PATH !!!"<ESC>0
+nmap <silent> <Leader>1 Ofshow(YELLOW "---------------\n");<ESC>0
+nmap <silent> <Leader>2 Ofshow(YELLOW "---------------\n");<ESC>0
+nmap <silent> <Leader>3 yiwofshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
+nmap <silent> <Leader>4 yiwOfshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
+nmap <silent> <Leader>5 yiwo#pragma message(PRINT_MACRO(<ESC>pa))<ESC>0
+nmap <silent> <Leader>6 yiwO#pragma message(PRINT_MACRO(<ESC>pa))<ESC>0
+nmap <silent> <Leader>7 ofshow("%8p\n", __builtin_return_address(0));<ESC>0
+nmap <silent> <Leader>8 oDBG_ENTERF;<ESC>0
+nmap <silent> <Leader>9 oDBG_RETURN();<left><left>
+nmap <silent> <Leader>0 oDBG_PRINTF;<ESC>0
 
 " add debug hotkeys for Makefile
-nmap <silent> <leader>m1 yiwo$(warning "==> [$(<ESC>pa)] <==")<ESC>0
-nmap <silent> <leader>m2 yiwo$(error   "==> [$(<ESC>pa)] <==")<ESC>0
+nmap <silent> <Leader>m1 yiwo$(warning "==> [$(<ESC>pa)] <==")<ESC>0
+nmap <silent> <Leader>m2 yiwo$(error   "==> [$(<ESC>pa)] <==")<ESC>0
