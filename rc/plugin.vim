@@ -124,6 +124,7 @@ let g:Powerline_loaded = 1
 "-----------------------------------------------------------------------
 " lightline.vim
 "-----------------------------------------------------------------------
+" let g:loaded_lightline = 1
 
 " use this is because ubuntu 14.04 doesn't support unicode U+1F512 LOCK
 if 1
@@ -136,6 +137,7 @@ if 1
 				\ },
 				\ 'component': {
 				\   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}',
+				\   'filename': '%t',
 				\   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
 				\ },
 				\ 'component_visible_condition': {
