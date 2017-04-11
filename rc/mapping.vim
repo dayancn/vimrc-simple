@@ -225,7 +225,7 @@ nmap <Leader>ck :!CC k<CR>
 
 " add debug hotkeys for c programming
 nmap <silent> <Leader>` o#error "======>>>>>>)))))) PROGRAM CONTAINS THIS PATH !!!"<ESC>0
-nmap <silent> <Leader>1 Ofshow(YELLOW "---------------\n");<ESC>0
+nmap <silent> <Leader>1 ofshow(YELLOW "---------------\n");<ESC>0
 nmap <silent> <Leader>2 Ofshow(YELLOW "---------------\n");<ESC>0
 nmap <silent> <Leader>3 yiwofshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
 nmap <silent> <Leader>4 yiwOfshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
