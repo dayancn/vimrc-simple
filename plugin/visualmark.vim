@@ -17,10 +17,18 @@ if !has("signs")
  finish
 endif
 
-if &bg == "dark"
- highlight SignColor ctermfg=Black ctermbg=Cyan guibg=RoyalBlue3 guifg=Cyan
+if g:colors_name == "peaksea"
+	if &bg == "dark"
+		highlight SignColor ctermfg=NONE ctermbg=60 guibg=RoyalBlue3 guifg=Cyan
+	else
+		highlight SignColor ctermfg=NONE ctermbg=60 guibg=RoyalBlue3 guifg=Cyan
+	endif
 else
- highlight SignColor ctermfg=Black ctermbg=Cyan guibg=RoyalBlue3 guifg=Cyan
+	if &bg == "dark"
+		highlight SignColor ctermfg=NONE ctermbg=60 guibg=RoyalBlue3 guifg=Cyan
+	else
+		highlight SignColor ctermfg=NONE ctermbg=232 guibg=RoyalBlue3 guifg=Cyan
+	endif
 endif
 
 " ---------------------------------------------------------------------
