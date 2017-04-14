@@ -504,7 +504,7 @@ elseif &background=='dark'
     hi Special		ctermfg=179	ctermbg=NONE	cterm=NONE
     hi Error		ctermfg=209	ctermbg=NONE	cterm=NONE
     hi Todo		ctermfg=88	ctermbg=186	cterm=NONE
-    hi Search		ctermfg=White	ctermbg=DarkRed	cterm=NONE
+    hi Search		ctermfg=White	ctermbg=166	cterm=NONE
     hi Visual		ctermfg=16	ctermbg=153	cterm=NONE
     hi Cursor		ctermfg=16	ctermbg=46	cterm=NONE
     " NOTE THIS IS IN THE COOL SECTION
@@ -531,7 +531,7 @@ elseif &background=='dark'
     hi DiffDelete	ctermfg=69	ctermbg=234	cterm=NONE
     hi DiffText		ctermfg=16	ctermbg=150	cterm=NONE
     hi SignColumn	ctermfg=254	ctermbg=28	cterm=NONE
-    hi IncSearch	ctermfg=White	ctermbg=DarkRed	cterm=NONE
+    hi IncSearch	ctermfg=White	ctermbg=166	cterm=NONE
     hi StatusLineNC	ctermfg=16	ctermbg=250	cterm=NONE
     hi VertSplit	ctermfg=16	ctermbg=250	cterm=NONE
     hi Underlined	ctermfg=111	ctermbg=NONE	cterm=underline
@@ -561,12 +561,11 @@ elseif &background=='dark'
       hi TabLineSel	ctermfg=fg	ctermbg=NONE	cterm=NONE
 
       hi CursorColumn	ctermfg=NONE	ctermbg=88	cterm=NONE
-      hi CursorLine	ctermfg=NONE	ctermbg=NONE	cterm=underline
+      hi CursorLine	ctermfg=NONE	ctermbg=235	cterm=NONE
       hi MatchParen	ctermfg=NONE	ctermbg=90
       hi TabLine	cterm=underline
       hi TabLineFill	cterm=underline
       hi Underlined	cterm=underline
-      hi CursorLine	cterm=underline
     endif
 
   endif " t_Co
