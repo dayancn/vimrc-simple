@@ -28,10 +28,10 @@ if has("gui_running")
 	hi ErrorTailSpace  gui=NONE guifg=#ffffff guibg=#6e2e2e
 	hi cErrorTailSpace gui=NONE guifg=#ffffff guibg=#6e2e2e
 else
-	hi Error80         cterm=NONE ctermfg=7 ctermbg=1
-	hi ErrorLeadSpace  cterm=NONE ctermfg=7 ctermbg=1
-	hi ErrorTailSpace  cterm=NONE ctermfg=7 ctermbg=1
-	hi cErrorTailSpace cterm=NONE ctermfg=7 ctermbg=1
+	hi Error80         cterm=NONE ctermfg=NONE ctermbg=52
+	hi ErrorLeadSpace  cterm=NONE ctermfg=NONE ctermbg=52
+	hi ErrorTailSpace  cterm=NONE ctermfg=NONE ctermbg=52
+	hi cErrorTailSpace cterm=NONE ctermfg=NONE ctermbg=52
 endif
 
 
