@@ -31,6 +31,10 @@ nmap <Leader>mc :set mouse&<CR>
 " save with overwrite easily
 nmap <silent> <Leader>w :w!<cr>
 
+" quit the current window
+nmap <silent> <Leader>q :q<cr>
+nmap <silent> <Leader>Q :q!<cr>
+
 " stop highlight, auto turned back on when using a search command
 nmap <silent> <Leader><cr> :nohlsearch<cr>
 
