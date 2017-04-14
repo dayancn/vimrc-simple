@@ -8,7 +8,7 @@
 "
 "	The peaksea color is simply a colorscheme with the default settings of
 "	the original ps_color. Lite version means there's no custom settings
-"	and fancy features such as integration with reloaded.vim 
+"	and fancy features such as integration with reloaded.vim
 "
 "	The full version of ps_color.vim will be maintained until Vim 8.
 "	By then there will be only the lite version: peaksea.vim
@@ -19,10 +19,10 @@
 "	a colorscheme file.  because ":set background" improperly
 "	may cause colorscheme be sourced twice
 "
-" Color Scheme Overview: 
+" Color Scheme Overview:
 "	:ru syntax/hitest.vim
 "
-" Relevant Help: 
+" Relevant Help:
 "	:h highlight-groups
 "	:h psc-cterm-color-table
 "
@@ -38,8 +38,8 @@ endif
 
 let g:colors_name = "peaksea"
 
-" I don't want to abuse folding, but here folding is used to avoid confusion. 
-if &background=='light' 
+" I don't want to abuse folding, but here folding is used to avoid confusion.
+if &background=='light'
   " for background=light {{{2
   " LIGHT COLOR DEFINE START
 
@@ -255,7 +255,7 @@ if &background=='light'
     "hi lCursor		ctermfg=bg	ctermbg=fg	cterm=NONE
   endif " t_Co==256
   " }}}2
-elseif &background=='dark' 
+elseif &background=='dark'
   " for background=dark {{{2
   " DARK COLOR DEFINE START
 
@@ -298,7 +298,7 @@ elseif &background=='dark'
   hi IncSearch		guifg=White	guibg=DarkRed	gui=NONE
   hi StatusLineNC	guifg=#000000	guibg=#c0c0c0	gui=NONE
   hi VertSplit		guifg=#000000	guibg=#c0c0c0	gui=NONE
-  hi Underlined		guifg=#80a0ff	guibg=NONE	gui=underline 
+  hi Underlined		guifg=#80a0ff	guibg=NONE	gui=underline
   hi Ignore		guifg=#000000	guibg=NONE
   " NOTE THIS IS IN THE COOL SECTION
   if v:version >= 700
@@ -312,7 +312,7 @@ elseif &background=='dark'
 
     hi Pmenu          guifg=#dddddd     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
     hi PmenuSel       guifg=#000000     guibg=#ffffff     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-    
+
     hi TabLine		guifg=fg	guibg=#008000	gui=NONE
     hi TabLineFill	guifg=fg	guibg=#008000	gui=NONE
     hi TabLineSel	guifg=fg	guibg=NONE	gui=NONE
@@ -325,19 +325,19 @@ elseif &background=='dark'
 
   " Vim 7 added stuffs
   if v:version >= 700
-    hi Ignore	gui=NONE  
+    hi Ignore	gui=NONE
 
     " the gui=undercurl could only support in Vim 7
     if has('spell')
-      hi SpellBad	gui=undercurl  
-      hi SpellCap	gui=undercurl  
-      hi SpellRare	gui=undercurl  
-      hi SpellLocal	gui=undercurl 
+      hi SpellBad	gui=undercurl
+      hi SpellCap	gui=undercurl
+      hi SpellRare	gui=undercurl
+      hi SpellLocal	gui=undercurl
     endif
-    hi TabLine		gui=underline  
-    hi TabLineFill	gui=underline  
-    hi Underlined	gui=underline  
-    hi CursorLine	gui=underline 
+    hi TabLine		gui=underline
+    hi TabLineFill	gui=underline
+    hi Underlined	gui=underline
+    hi CursorLine	gui=underline
   endif
 
   " gui define for background=dark end here
@@ -404,89 +404,89 @@ elseif &background=='dark'
       " However, the bright background color is not available for 8-color terms.
       "
       " You can manually set t_Co=16 in your .vimrc to see if your terminal
-      " supports 16 colours, 
-      hi DiffText	cterm=none  
-      hi Visual		cterm=none  
-      hi Cursor		cterm=none  
-      hi Comment	cterm=none  
-      hi Todo		cterm=none  
-      hi StatusLine	cterm=none  
-      hi Question	cterm=none  
-      hi DiffChange	cterm=none  
-      hi ModeMsg	cterm=none  
-      hi VisualNOS	cterm=none  
-      hi ErrorMsg	cterm=none  
-      hi WildMenu	cterm=none  
-      hi DiffAdd	cterm=none  
-      hi Folded		cterm=none  
-      hi DiffDelete	cterm=none  
-      hi Normal		cterm=none  
-      hi PmenuThumb	cterm=none 
-      hi Search		cterm=bold  
-      hi Special	cterm=bold  
-      hi Constant	cterm=bold  
-      hi Number		cterm=bold  
-      hi LineNr		cterm=bold  
-      hi PreProc	cterm=bold  
-      hi Statement	cterm=bold  
-      hi Type		cterm=bold  
-      hi Error		cterm=bold  
-      hi Identifier	cterm=bold  
-      hi SpecialKey	cterm=bold  
-      hi NonText	cterm=bold  
-      hi MoreMsg	cterm=bold  
-      hi Title		cterm=bold  
-      hi WarningMsg	cterm=bold  
-      hi FoldColumn	cterm=bold  
-      hi SignColumn	cterm=bold  
-      hi Directory	cterm=bold  
-      hi DiffDelete	cterm=bold 
+      " supports 16 colours,
+      hi DiffText	cterm=none
+      hi Visual		cterm=none
+      hi Cursor		cterm=none
+      hi Comment	cterm=none
+      hi Todo		cterm=none
+      hi StatusLine	cterm=none
+      hi Question	cterm=none
+      hi DiffChange	cterm=none
+      hi ModeMsg	cterm=none
+      hi VisualNOS	cterm=none
+      hi ErrorMsg	cterm=none
+      hi WildMenu	cterm=none
+      hi DiffAdd	cterm=none
+      hi Folded		cterm=none
+      hi DiffDelete	cterm=none
+      hi Normal		cterm=none
+      hi PmenuThumb	cterm=none
+      hi Search		cterm=bold
+      hi Special	cterm=bold
+      hi Constant	cterm=bold
+      hi Number		cterm=bold
+      hi LineNr		cterm=bold
+      hi PreProc	cterm=bold
+      hi Statement	cterm=bold
+      hi Type		cterm=bold
+      hi Error		cterm=bold
+      hi Identifier	cterm=bold
+      hi SpecialKey	cterm=bold
+      hi NonText	cterm=bold
+      hi MoreMsg	cterm=bold
+      hi Title		cterm=bold
+      hi WarningMsg	cterm=bold
+      hi FoldColumn	cterm=bold
+      hi SignColumn	cterm=bold
+      hi Directory	cterm=bold
+      hi DiffDelete	cterm=bold
     else
       " Background > 7 is only available with 16 or more colors
 
-      hi WarningMsg	cterm=none  
-      hi Search		cterm=none  
-      hi Visual		cterm=none  
-      hi Cursor		cterm=none  
-      hi Special	cterm=none  
-      hi Comment	cterm=none  
-      hi Constant	cterm=none  
-      hi Number		cterm=none  
-      hi LineNr		cterm=none  
-      hi PreProc	cterm=none  
-      hi Todo		cterm=none  
-      hi Error		cterm=none  
-      hi Identifier	cterm=none  
-      hi Folded		cterm=none  
-      hi SpecialKey	cterm=none  
-      hi Directory	cterm=none  
-      hi ErrorMsg	cterm=none  
-      hi Normal		cterm=none  
-      hi PmenuThumb	cterm=none 
-      hi WildMenu	cterm=none  
-      hi FoldColumn	cterm=none  
-      hi SignColumn	cterm=none  
-      hi DiffAdd	cterm=none  
-      hi DiffChange	cterm=none  
-      hi Question	cterm=none  
-      hi StatusLine	cterm=none  
-      hi DiffText	cterm=none 
-      hi IncSearch	cterm=reverse  
-      hi StatusLineNC	cterm=reverse  
-      hi VertSplit	cterm=reverse 
+      hi WarningMsg	cterm=none
+      hi Search		cterm=none
+      hi Visual		cterm=none
+      hi Cursor		cterm=none
+      hi Special	cterm=none
+      hi Comment	cterm=none
+      hi Constant	cterm=none
+      hi Number		cterm=none
+      hi LineNr		cterm=none
+      hi PreProc	cterm=none
+      hi Todo		cterm=none
+      hi Error		cterm=none
+      hi Identifier	cterm=none
+      hi Folded		cterm=none
+      hi SpecialKey	cterm=none
+      hi Directory	cterm=none
+      hi ErrorMsg	cterm=none
+      hi Normal		cterm=none
+      hi PmenuThumb	cterm=none
+      hi WildMenu	cterm=none
+      hi FoldColumn	cterm=none
+      hi SignColumn	cterm=none
+      hi DiffAdd	cterm=none
+      hi DiffChange	cterm=none
+      hi Question	cterm=none
+      hi StatusLine	cterm=none
+      hi DiffText	cterm=none
+      hi IncSearch	cterm=reverse
+      hi StatusLineNC	cterm=reverse
+      hi VertSplit	cterm=reverse
 
       " Well, well, bold font with color 0-7 is not possible.
       " So, the Question, StatusLine, DiffText cannot act as expected.
 
-      hi Statement	cterm=none  
-      hi Type		cterm=none  
-      hi MoreMsg	cterm=none  
-      hi ModeMsg	cterm=none  
-      hi NonText	cterm=none  
-      hi Title		cterm=none  
-      hi VisualNOS	cterm=none  
-      hi DiffDelete	cterm=none  
-      hi TabLineSel	cterm=none 
+      hi Statement	cterm=none
+      hi Type		cterm=none
+      hi MoreMsg	cterm=none
+      hi ModeMsg	cterm=none
+      hi NonText	cterm=none
+      hi Title		cterm=none
+      hi VisualNOS	cterm=none
+      hi DiffDelete	cterm=none
+      hi TabLineSel	cterm=none
 
     endif
   elseif &t_Co==256
@@ -534,7 +534,7 @@ elseif &background=='dark'
     hi IncSearch	ctermfg=White	ctermbg=DarkRed	cterm=NONE
     hi StatusLineNC	ctermfg=16	ctermbg=250	cterm=NONE
     hi VertSplit	ctermfg=16	ctermbg=250	cterm=NONE
-    hi Underlined	ctermfg=111	ctermbg=NONE	cterm=underline 
+    hi Underlined	ctermfg=111	ctermbg=NONE	cterm=underline
     hi Ignore		ctermfg=16	ctermbg=NONE
     " NOTE THIS IS IN THE COOL SECTION
     if v:version >= 700
@@ -563,10 +563,10 @@ elseif &background=='dark'
       hi CursorColumn	ctermfg=NONE	ctermbg=88	cterm=NONE
       hi CursorLine	ctermfg=NONE	ctermbg=NONE	cterm=underline
       hi MatchParen	ctermfg=NONE	ctermbg=90
-      hi TabLine	cterm=underline  
-      hi TabLineFill	cterm=underline  
-      hi Underlined	cterm=underline  
-      hi CursorLine	cterm=underline 
+      hi TabLine	cterm=underline
+      hi TabLineFill	cterm=underline
+      hi Underlined	cterm=underline
+      hi CursorLine	cterm=underline
     endif
 
   endif " t_Co
@@ -586,7 +586,7 @@ hi link		Character	Number
 hi link		SpecialChar	LineNr
 hi link		Tag		Identifier
 hi link		cCppOut		LineNr
-" The following are not standard hi links, 
+" The following are not standard hi links,
 " these are used by DrChip
 hi link		Warning		MoreMsg
 hi link		Notice		Constant
