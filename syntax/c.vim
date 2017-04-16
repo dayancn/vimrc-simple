@@ -8,18 +8,19 @@ syn keyword cType BOOLEAN BOOL1 CHR1 INT1 UINT1 BYTE VOID INT2 UINT2 INT4 UINT4 
 syn keyword cOperator likely unlikely
 
 
+" matches should be done each time load source files!
+syn match ErrorLeadSpace /^ \+/       " highlight any leading spaces
+syn match ErrorTailSpace /\s\+$/      " highlight any trailing spaces
+syn match cErrorTailSpace /\s\+$/ contained " highlight any trailing spaces
+"syn match Error80        /\%>80v.\+/ " highlight anything past 80 in red
+
+
 " process only once
 if exists("my_vim_c_vim_loaded") || &compatible
 	finish
 else
 	let my_vim_c_vim_loaded = 1
 endif
-
-
-syn match ErrorLeadSpace /^ \+/       " highlight any leading spaces
-syn match ErrorTailSpace /\s\+$/      " highlight any trailing spaces
-syn match cErrorTailSpace /\s\+$/ contained " highlight any trailing spaces
-"syn match Error80        /\%>80v.\+/ " highlight anything past 80 in red
 
 
 if has("gui_running")
