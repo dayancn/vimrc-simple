@@ -124,13 +124,13 @@ let g:syntastic_check_on_wq = 0
 " vim-powerline
 "-----------------------------------------------------------------------
 " disable powerline
-let g:Powerline_loaded = 1
+" let g:Powerline_loaded = 1
 
 
 "-----------------------------------------------------------------------
 " lightline.vim
 "-----------------------------------------------------------------------
-" let g:loaded_lightline = 1
+let g:loaded_lightline = 1
 
 " use this is because ubuntu 14.04 doesn't support unicode U+1F512 LOCK
 if 1
