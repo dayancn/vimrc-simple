@@ -201,6 +201,8 @@ nmap <Leader>nf :NERDTreeFind<cr>
 nmap gf gF
 nmap <C-W>f <C-W>F
 nmap <C-W><C-F> <C-W>F
+nmap <C-W>t <C-W>gF
+nmap <C-W><C-T> <C-W>gF
 
 
 "-----------------------------------------------------------------------
