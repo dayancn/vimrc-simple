@@ -21,17 +21,17 @@
 #define _WHITE                 "\033[47m"
 
 #define cprintf(fmt, args...) do \
-{                                               \
-	FILE *fp1 = fopen("/dev/ttyS0", "a");   \
-	FILE *fp2 = fopen("/tmp/dbg.txt", "a"); \
-	int  flag = ${1:2};                          \
-	if (fp1 && (flag == 0 || flag == 2)) {  \
-		fprintf(fp1, fmt, ## args);     \
-		fclose(fp1);                    \
-	}                                       \
-	if (fp2 && (flag == 1 || flag == 2)) {  \
-		fprintf(fp2, fmt, ## args);     \
-		fclose(fp2);                    \
+{ \
+	int  flag = 1;                                                \
+	FILE *fp1 = (flag & 0x1) ? fopen("/dev/ttyS0", "a") : NULL;   \
+	FILE *fp2 = (flag & 0x2) ? fopen("/tmp/dbg.txt", "a") : NULL; \
+	if (fp1) { \
+		fprintf(fp1, fmt, ## args);                           \
+		fclose(fp1);                                          \
+	}                                                             \
+	if (fp2) { \
+		fprintf(fp2, fmt, ## args);                           \
+		fclose(fp2);                                          \
 	} \
 } while (0)
 
