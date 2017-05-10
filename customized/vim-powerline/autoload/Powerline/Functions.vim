@@ -50,7 +50,7 @@ function! Powerline#Functions#GetFilepath() " {{{
 	return ret
 endfunction " }}}
 function! Powerline#Functions#GetShortPath(threshold) " {{{
-	let fullpath = split(expand('%:~'), '[/\\]')
+	let fullpath = split(substitute(expand('%:p:h'), $HOME, '~', 'g'), '/')
 
 	if len(fullpath) > a:threshold
 		let fullpath = [fullpath[0], '…'] +  fullpath[-a:threshold + 1 :]
