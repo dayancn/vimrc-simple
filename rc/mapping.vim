@@ -146,6 +146,7 @@ nmap <Leader>cd :cd %:p:h<cr>:pwd<cr>
 "-----------------------------------------------------------------------
 " tags related mappings
 "-----------------------------------------------------------------------
+nmap <Leader>tj :tj <C-R>=expand("<cword>")<cr><cr>
 nmap <Leader>ts :ts <C-R>=expand("<cword>")<cr><cr>
 nmap <Leader>tt :ts<cr>
 nmap <Leader>tp :tp<cr>
