@@ -71,7 +71,20 @@ nmap <silent> <space> :Tlist<CR>
 "-----------------------------------------------------------------------
 " vim-fugitive
 "-----------------------------------------------------------------------
-nmap <LocalLeader>g :Gstatus<cr>
+nmap <LocalLeader>ge :Gedit<cr>
+nmap <LocalLeader>gs :Gsplit<cr>
+nmap <LocalLeader>gv :Gvsplit<cr>
+nmap <LocalLeader>gt :Gtabedit<cr>
+nmap <LocalLeader>gd :Gdiff<cr>
+nmap <LocalLeader>g  :Gstatus<cr>
+nmap <LocalLeader>gb :Gblame<cr>
+nmap <LocalLeader>gm :Gmove<cr>
+nmap <LocalLeader>gr :Gremove<cr>
+nmap <LocalLeader>gg :Ggrep<cr>
+nmap <LocalLeader>gl :Glog<cr>
+nmap <LocalLeader>gr :Gread<cr>
+nmap <LocalLeader>gw :Gwrite<cr>
+nmap <LocalLeader>gB :Gbrowse<cr>
 
 
 "-----------------------------------------------------------------------
