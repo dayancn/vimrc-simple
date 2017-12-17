@@ -6,7 +6,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-function! QuickFix()
+function! CQuickfix()
 	botright copen
 	exec "nnoremap <silent> <buffer> q :ccl<CR>"
 	exec "nnoremap <silent> <buffer> t <C-W><CR><C-W>T"
@@ -18,13 +18,35 @@ function! QuickFix()
 endfunction
 
 
-function! PrevFile()
+function! CQuickfixPrev()
 	:cp
 endfunction
 
 
-function! NextFile()
+function! CQuickfixNext()
 	:cn
+endfunction
+
+
+function! LQuickfix()
+	botright lwindow
+	exec "nnoremap <silent> <buffer> q :lcl<CR>"
+	exec "nnoremap <silent> <buffer> t <C-W><CR><C-W>T"
+	exec "nnoremap <silent> <buffer> T <C-W><CR><C-W>TgT<C-W><C-W>"
+	exec "nnoremap <silent> <buffer> o <CR>"
+	exec "nnoremap <silent> <buffer> go <CR><C-W><C-W>"
+	exec "nnoremap <silent> <buffer> v <C-W><C-W><C-W>v<C-L><C-W><C-J><CR>"
+	exec "nnoremap <silent> <buffer> gv <C-W><C-W><C-W>v<C-L><C-W><C-J><CR><C-W><C-J>"
+endfunction
+
+
+function! LQuickfixPrev()
+	:lp
+endfunction
+
+
+function! LQuickfixNext()
+	:lne
 endfunction
 
 

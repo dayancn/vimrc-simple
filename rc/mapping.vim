@@ -171,10 +171,15 @@ nmap <Leader>tn :tn<cr>
 " quickfix mappings
 "-----------------------------------------------------------------------
 nmap <silent> <Leader>cw :cw<cr>
-nmap <silent> <Leader>cc :call QuickFix()<cr>
+nmap <silent> <Leader>cc :call CQuickfix()<cr>
 nmap <silent> <Leader>cp ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
-nmap <silent> <Leader>cf :call PrevFile()<CR>
-nmap <silent> <Leader>cn :call NextFile()<CR>
+nmap <silent> <Leader>cf :call CQuickfixPrev()<CR>
+nmap <silent> <Leader>cn :call CQuickfixNext()<CR>
+nmap <silent> <Leader>lw :lw<cr>
+nmap <silent> <Leader>lc :lcl<cr>
+nmap <silent> <Leader>ll :call LQuickfix()<cr>
+nmap <silent> <Leader>lf :call LQuickfixPrev()<CR>
+nmap <silent> <Leader>ln :call LQuickfixNext()<CR>
 
 
 "-----------------------------------------------------------------------
