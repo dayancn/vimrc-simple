@@ -250,7 +250,7 @@ endif
 
 function! ToggleLocationList()
   let l:own = winnr()
-  lw
+  LQuickfix()
   let l:cwn = winnr()
   if(l:cwn == l:own)
     if &buftype == 'quickfix'
@@ -277,7 +277,7 @@ function! cscope#find(action, word)
   try
     exe ':lcs f '.a:action.' '.a:word
     if g:cscope_open_location == 1
-      lw
+      LQuickfix()
     endif
   catch
     echohl WarningMsg | echo 'Can not find '.a:word.' with querytype as '.a:action.'.' | echohl None
