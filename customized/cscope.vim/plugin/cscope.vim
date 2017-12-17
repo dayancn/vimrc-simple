@@ -33,7 +33,7 @@ endif
 set cscopequickfix=s-,g-,d-,c-,t-,e-,f-,i-
 
 function! s:ClearDBs()
-  cs kill -1
+  cscope kill -1
   let s:dbs = {}
   call <SID>RmDBfiles()
   call writefile([], s:index_file)
@@ -175,7 +175,7 @@ function! s:_CreateDB(dir)
     let files = <SID>ListFiles(a:dir)
     call writefile(files, cscope_files)
   endif
-  exec 'cs kill '.s:cscope_vim_dir.'/'.id.'.db'
+  exec 'cscope kill '.s:cscope_vim_dir.'/'.id.'.db'
   exec 'silent !'.g:cscope_cmd.' -b -i '.cscope_files.' -f'.s:cscope_vim_dir.'/'.id.'.db'
   let s:dbs[a:dir]['dirty'] = 0
 endfunction
@@ -209,7 +209,7 @@ function! s:InitDB(dir)
 endfunction
 
 function! s:LoadDB(dir)
-  exe 'cs add '.s:cscope_vim_dir.'/'.s:dbs[a:dir]['id'].'.db'
+  exe 'cscope add '.s:cscope_vim_dir.'/'.s:dbs[a:dir]['id'].'.db'
   let s:dbs[a:dir]['loadtimes'] = s:dbs[a:dir]['loadtimes']+1
   call <SID>FlushIndex()
 endfunction
@@ -317,7 +317,7 @@ function! s:updateDBs(dirs)
     call <SID>_CreateDB(d)
   endfor
   call <SID>FlushIndex()
-  cs reset
+  cscope reset
 endfunction
 
 function! cscope#updateDB()
