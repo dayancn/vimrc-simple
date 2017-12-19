@@ -102,7 +102,9 @@ function! s:ListFiles(dir)
         if stridx(fn, ' ') != -1
           let fn = '"'.fn.'"'
         endif
-        call add(f, fn)
+        if fn =~ "[a-zA-Z0-9_].[ch]$"
+          call add(f, fn)
+        endif
       endif
     endfor
     let cwd = len(d) ? remove(d, 0) : ''
