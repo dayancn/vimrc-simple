@@ -150,7 +150,7 @@ function! s:_CreateDB(dir, init)
   endif
   exec 'cs kill '.cscope_db
   redir @x
-  exec 'silent !'.g:cscope_cmd.' -b -i '.cscope_files.' -f'.cscope_db
+  exec 'silent !'.g:cscope_cmd.' -bk -i '.cscope_files.' -f'.cscope_db
   redi END
   if @x =~ "\nCommand terminated\n"
     echohl WarningMsg | echo "Failed to create cscope database for ".a:dir.", please check if " | echohl None
