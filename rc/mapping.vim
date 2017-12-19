@@ -116,24 +116,24 @@ nnoremap <LocalLeader>ba :1,1000 bd!<cr>
 " Cscove(new name for this plugin, since cscope.vim is used too widely.)
 " is a smart cscope helper for vim.
 "-----------------------------------------------------------------------
-nnoremap <LocalLeader>fa :call cscope#findInteractive(expand('<cword>'))<CR>
+nnoremap <LocalLeader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
 nnoremap <LocalLeader>l :call ToggleLocationList()<CR>
 " s: Find this C symbol
-nnoremap <LocalLeader>fs :call cscope#find('s', expand('<cword>'))<CR>
+nnoremap <LocalLeader>fs :call CscopeFind('s', expand('<cword>'))<CR>
 " g: Find this definition
-nnoremap <LocalLeader>fg :call cscope#find('g', expand('<cword>'))<CR>
+nnoremap <LocalLeader>fg :call CscopeFind('g', expand('<cword>'))<CR>
 " d: Find functions called by this function
-nnoremap <LocalLeader>fd :call cscope#find('d', expand('<cword>'))<CR>
+nnoremap <LocalLeader>fd :call CscopeFind('d', expand('<cword>'))<CR>
 " c: Find functions calling this function
-nnoremap <LocalLeader>fc :call cscope#find('c', expand('<cword>'))<CR>
+nnoremap <LocalLeader>fc :call CscopeFind('c', expand('<cword>'))<CR>
 " t: Find this text string
-nnoremap <LocalLeader>ft :call cscope#find('t', expand('<cword>'))<CR>
+nnoremap <LocalLeader>ft :call CscopeFind('t', expand('<cword>'))<CR>
 " e: Find this egrep pattern
-nnoremap <LocalLeader>fe :call cscope#find('e', expand('<cword>'))<CR>
+nnoremap <LocalLeader>fe :call CscopeFind('e', expand('<cword>'))<CR>
 " f: Find this file
-nnoremap <LocalLeader>ff :call cscope#find('f', expand('<cword>'))<CR>
+nnoremap <LocalLeader>ff :call CscopeFind('f', expand('<cword>'))<CR>
 " i: Find files #including this file
-nnoremap <LocalLeader>fi :call cscope#find('i', expand('<cword>'))<CR>
+nnoremap <LocalLeader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 
 
 "-----------------------------------------------------------------------
