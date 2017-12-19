@@ -178,7 +178,7 @@ function! s:_CreateDB(dir)
     call writefile(files, cscope_files)
   endif
   exec 'cscope kill '.s:cscope_vim_dir.'/'.id.'.db'
-  exec 'silent !'.g:cscope_cmd.' -b -i '.cscope_files.' -f'.s:cscope_vim_dir.'/'.id.'.db'
+  exec 'silent !'.g:cscope_cmd.' -bk -i '.cscope_files.' -f'.s:cscope_vim_dir.'/'.id.'.db'
   let s:dbs[a:dir]['dirty'] = 0
 endfunction
 
