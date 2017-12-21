@@ -146,12 +146,19 @@ function! OnlineDoc(search_engine)
 endfunction
 
 
-" for lookupfile
-function! RunShell(Msg, Shell)
-	echo a:Msg . g:LookupFile_TagExpr
+" run shell command
+function! RunShell(Shell)
 	call system(a:Shell)
+endfunction
+
+
+" for lookupfile
+function! CreateLookupFileDB(Msg, Shell)
+	echo a:Msg . g:LookupFile_TagExpr
+	call RunShell(a:Shell)
 	echo 'Done'
 endfunction
+
 
 " ---------------------------------------------------------------------------
 " TabMessage: Put output of commands in a new tab."
