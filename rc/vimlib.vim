@@ -160,6 +160,15 @@ function! CreateLookupFileDB(Msg, Shell)
 endfunction
 
 
+" update ctags, cscope db and reset
+function! UpdateCscopeDB()
+	echo 'Preparing for cscope and ctags ...'
+	call RunShell("CC t")
+	cscope reset
+	echo 'Done'
+endfunction
+
+
 " ---------------------------------------------------------------------------
 " TabMessage: Put output of commands in a new tab."
 " ---------------------------------------------------------------------------

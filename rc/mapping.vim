@@ -261,7 +261,7 @@ noremap <Leader>pp :setlocal paste!<cr>
 nmap 0 ^
 
 " forces (re)indentation of a block of code
-" nmap <F1> - reserved for vim help
+nmap <F1> :call UpdateCscopeDB()<CR>
 " nmap <F2> - reserved for used by vim plugin visualmark.vim
 nmap <F3> /<C-R>=expand("<cword>")<CR><CR>
 nmap <F4> ?<C-R>=expand("<cword>")<CR><CR>
