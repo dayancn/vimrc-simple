@@ -78,18 +78,6 @@ function! VisualSelection(direction, extra_filter) range
 		call CmdLine("vimgrep " . '/\C\<'. l:pattern . '\>/' . ' **/*.' . a:extra_filter)
 	elseif a:direction == 'replace'
 		call CmdLine("%s" . '/'. l:pattern . '/')
-	elseif a:direction == 'replace1'
-		call CmdLine("s" . '/'. l:pattern . '/' . "<span class='lang' key=''><\\/span>")
-		execute "normal gtgg/" . l:pattern . "^M"
-		execute 'normal zrn' . '2F"'
-	elseif a:direction == 'replace2'
-		call CmdLine("s" . '/'. l:pattern . '/' . '_( "" )')
-		execute 'normal 0f"x$F"x'
-		execute "normal gtgg/" . l:pattern . "^M"
-		execute 'normal zrn' . '2F"'
-	elseif a:direction == 'replace3'
-		call CmdLine("s" . '/'. l:pattern . '/' . '_( "" )')
-		execute 'normal 0f"x$F"x'
 	elseif a:direction == 'f'
 		execute "normal /" . l:pattern . "^M"
 	endif
