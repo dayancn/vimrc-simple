@@ -223,6 +223,7 @@ vnoremap <silent> <Leader>g :call VisualSelection('gv', '')<CR>
 
 " When you press <Leader>r you can search and replace the selected text
 vnoremap <silent> <Leader>r :call VisualSelection('replace', '')<CR>
+vnoremap <silent> <Leader>R :call VisualSelection('replace2', '')<CR>
 
 
 "-----------------------------------------------------------------------
