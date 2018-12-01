@@ -2330,11 +2330,11 @@ let s:TreeMarkers_UTF8 = {
                             \}
 
 let s:TreeMarkers_Text = {
-                            \ 'splitT' : '+',
-                            \ 'arrowF' : '>',
-                            \ 'arrowR' : '<',
-                            \ 'extV' : '|',
-                            \ 'extH': '-',
+                            \ 'splitT' : '├',
+                            \ 'arrowF' : '→',
+                            \ 'arrowR' : '←',
+                            \ 'extV' : '│',
+                            \ 'extH': '─',
                             \ 'depth': 'depth:'
                             \}
 
