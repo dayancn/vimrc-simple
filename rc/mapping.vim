@@ -218,12 +218,21 @@ nmap <Leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><
 " Open vimgrep and put the cursor in the right position
 nnoremap <Leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
 
-" When you press gv you vimgrep after the selected text
-vnoremap <silent> <Leader>g :call VisualSelection('gv', '')<CR>
+if v:version < 800
+	" When you press gv you vimgrep after the selected text
+	vnoremap <silent> <Leader>g :call VisualSelection('gv', '')<CR>
 
-" When you press <Leader>r you can search and replace the selected text
-vnoremap <silent> <Leader>r :call VisualSelection('replace', '')<CR>
-vnoremap <silent> <Leader>R :call VisualSelection('replace2', '')<CR>
+	" When you press <Leader>r you can search and replace the selected text
+	vnoremap <silent> <Leader>r :call VisualSelection('replace', '')<CR>
+	vnoremap <silent> <Leader>R :call VisualSelection('replace2', '')<CR>
+else
+	" When you press gv you vimgrep after the selected text
+	vnoremap <leader>g :call VisualSelection('gv', '')<CR>:<C-U><C-R>=@g<CR>
+
+	" When you press <Leader>r you can search and replace the selected text
+	vnoremap <Leader>r :call VisualSelection('replace', '')<CR>:<C-U><C-R>=@g<CR>
+	vnoremap <Leader>R :call VisualSelection('replace2', '')<CR>:<C-U><C-R>=@g<CR>
+end
 
 
 "-----------------------------------------------------------------------

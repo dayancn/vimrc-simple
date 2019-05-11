@@ -59,9 +59,13 @@ endfunc
 
 
 function! CmdLine(str)
-	exe "menu Foo.Bar :" . a:str
-	emenu Foo.Bar
-	unmenu Foo
+	if v:version < 800
+		exe "menu Foo.Bar :" . a:str
+		emenu Foo.Bar
+		unmenu Foo
+	else
+		let @g=a:str
+	endif
 endfunction
 
 
