@@ -222,7 +222,6 @@ nmap <Leader>e :call OnlineDoc(4)<CR>
 "-----------------------------------------------------------------------
 " vimgrep searching
 "-----------------------------------------------------------------------
-nmap <F6> :vimgrep /<C-R>=expand("<cword>")<cr>/ **/*.c **/*.h<cr><C-o>:cw<cr>
 
 " Vimgreps in the current file
 nmap <Leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
@@ -288,7 +287,7 @@ nmap <F1> :call UpdateCscopeDB()<CR>
 nmap <F3> /<C-R>=expand("<cword>")<CR><CR>
 nmap <F4> ?<C-R>=expand("<cword>")<CR><CR>
 " nmap <F5> - reserved for vim lookupfile plugin
-" nmap <F6> - reserved for vimgrep
+" nmap <F6> - current unused
 nmap <F7> :call CreateLookupFileDB("Generating > ", "~/.vim_rain/shell/lookfile.sh " . g:LookupFile_TagExpr)<cr>
 nmap <F8> vi"*n
 nmap <F9> vi"#N
