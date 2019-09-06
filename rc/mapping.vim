@@ -69,6 +69,18 @@ nmap <silent> <space> :Tlist<CR>
 
 
 "-----------------------------------------------------------------------
+" tig - Vim plugin to use Tig as a git client
+"-----------------------------------------------------------------------
+nnoremap <LocalLeader>tl  :Tig log<cr>
+nnoremap <LocalLeader>ts  :Tig show<cr>
+nnoremap <LocalLeader>tb  :TigBlame<cr>
+nnoremap <LocalLeader>t   :TigOpenProjectRootDir<cr>
+nnoremap <LocalLeader>tf  :TigOpenCurrentFile<cr>
+nnoremap <LocalLeader>tg  :TigGrep <c-r>=expand('<cword>')<cr><cr>
+nnoremap <LocalLeader>tt  :TigGrepResume<cr>
+
+
+"-----------------------------------------------------------------------
 " vim-fugitive
 "-----------------------------------------------------------------------
 nmap <LocalLeader>ge :Gedit<cr>
