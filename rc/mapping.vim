@@ -287,8 +287,8 @@ nmap <F1> :call UpdateCscopeDB()<CR>
 nmap <F3> /<C-R>=expand("<cword>")<CR><CR>
 nmap <F4> ?<C-R>=expand("<cword>")<CR><CR>
 " nmap <F5> - reserved for vim lookupfile plugin
-" nmap <F6> - current unused
-nmap <F7> :call CreateLookupFileDB("Generating > ", "~/.vim_rain/shell/lookfile.sh " . g:LookupFile_TagExpr)<cr>
+nmap <F6> :call CreateLookupFileDB("Generating > ", "~/.vim_rain/shell/lookupfile.sh " . g:LookupFile_TagExpr)<cr>
+" nmap <F7> - current unused
 nmap <F8> vi"*n
 nmap <F9> vi"#N
 " nmap <F10> - reserved for guake
