@@ -78,6 +78,14 @@ let Tlist_Exit_OnlyWindow = 1
 
 
 "-----------------------------------------------------------------------
+" ack/ag - The Silver Searcher. Like ack, but faster
+"-----------------------------------------------------------------------
+if executable('ag')
+	let g:ackprg = 'ag --vimgrep --smart-case'
+endif
+
+
+"-----------------------------------------------------------------------
 " lookupfile setting
 "-----------------------------------------------------------------------
 let g:LookupFile_MinPatLength=2
