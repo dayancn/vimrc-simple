@@ -78,11 +78,11 @@ function! VisualSelection(direction, extra_filter) range
 
 	if a:direction == 'b'
 		execute "normal ?" . l:pattern . "^M"
-	elseif a:direction == 'gv'
-		call CmdLine("vimgrep " . '/\C\<'. l:pattern . '\>/' . ' **/*.' . a:extra_filter)
+	elseif a:direction == 'ack'
+		call CmdLine("Ack '" . l:pattern . "' ./" )
 	elseif a:direction == 'replace'
 		call CmdLine("%s" . '/'. l:pattern . '/')
-	elseif a:direction == 'replace2'
+	elseif a:direction == 'REPLACE'
 		call CmdLine("%s" . '/\C\<'. l:pattern . '\>/')
 	elseif a:direction == 'f'
 		execute "normal /" . l:pattern . "^M"

@@ -220,29 +220,19 @@ nmap <Leader>e :call OnlineDoc(4)<CR>
 
 
 "-----------------------------------------------------------------------
-" vimgrep searching
+" searching
 "-----------------------------------------------------------------------
-
-" Vimgreps in the current file
-nmap <Leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
-
-" Open vimgrep and put the cursor in the right position
-nnoremap <Leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+" search in the current file
+nmap <Leader><space> :vimgrep /<C-R>=expand("<cword>")<cr>/ <C-R>%<C-A><CR>
 
 if v:version < 800
-	" When you press gv you vimgrep after the selected text
-	vnoremap <silent> <Leader>g :call VisualSelection('gv', '')<CR>
-
-	" When you press <Leader>r you can search and replace the selected text
+	vnoremap <silent> <Leader>g :call VisualSelection('ack', '')<CR>
 	vnoremap <silent> <Leader>r :call VisualSelection('replace', '')<CR>
-	vnoremap <silent> <Leader>R :call VisualSelection('replace2', '')<CR>
+	vnoremap <silent> <Leader>R :call VisualSelection('REPLACE', '')<CR>
 else
-	" When you press gv you vimgrep after the selected text
-	vnoremap <leader>g :call VisualSelection('gv', '')<CR>:<C-U><C-R>=@g<CR>
-
-	" When you press <Leader>r you can search and replace the selected text
+	vnoremap <leader>g :call VisualSelection('ack', '')<CR>:<C-U><C-R>=@g<CR>
 	vnoremap <Leader>r :call VisualSelection('replace', '')<CR>:<C-U><C-R>=@g<CR>
-	vnoremap <Leader>R :call VisualSelection('replace2', '')<CR>:<C-U><C-R>=@g<CR>
+	vnoremap <Leader>R :call VisualSelection('REPLACE', '')<CR>:<C-U><C-R>=@g<CR>
 end
 
 
