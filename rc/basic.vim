@@ -42,6 +42,9 @@ set more
 " show line number
 set number
 
+" show line number
+set relativenumber
+
 " highlight the cusor-located line
 set cursorline
 
