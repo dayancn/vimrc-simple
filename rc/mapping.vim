@@ -57,12 +57,16 @@ vnoremap < <<CR>gv
 
 
 "-----------------------------------------------------------------------
-" plugin related
+" tagbar/taglist plugin
 "-----------------------------------------------------------------------
 " use <space> to toggle taglist window
-nmap <silent> <space> :Tlist<CR>
+"nmap <silent> <space> :Tlist<CR>
+nmap <silent> <space> :TagbarToggle<CR>
 
+
+"-----------------------------------------------------------------------
 " YankStack
+"-----------------------------------------------------------------------
 "nmap <Leader>y :Yanks<CR>
 "noremap <c-p> <Plug>yankstack_substitute_older_paste
 "noremap <c-n> <Plug>yankstack_substitute_newer_paste
