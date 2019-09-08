@@ -142,6 +142,8 @@ set scrolloff=6
 " the cursor if 'nowrap' is set.
 set sidescrolloff=6
 
+" use │ instead of | when split screen vertically.
+set fillchars=vert:│
 
 "-----------------------------------------------------------------------
 " 3. advanced programming related settings
