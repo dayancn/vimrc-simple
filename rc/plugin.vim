@@ -253,13 +253,17 @@ if has("gui_running")
 	"set guitablabel=%M\ %t
 	let g:solarized_degrade=1
 	"colorscheme solarized
-	colorscheme peaksea
+	"colorscheme peaksea
+	colorscheme gruvbox
 else
 	set t_Co=256
 	set background=dark
 	"set background=light
 
 	let g:solarized_termcolors=256
+	colorscheme gruvbox
+	"colorscheme peaksea
 	"colorscheme solarized
-	colorscheme peaksea
+	"colorscheme peachpuff
+	"hi CursorLine	ctermfg=NONE	ctermbg=238	cterm=NONE
 endif
