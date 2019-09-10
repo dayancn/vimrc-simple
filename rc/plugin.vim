@@ -66,6 +66,15 @@ let Tlist_Exit_OnlyWindow = 1
 
 
 "-----------------------------------------------------------------------
+" tagbar
+"-----------------------------------------------------------------------
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
+"let g:tagbar_autoshowtag = 1
+"let g:tagbar_autopreview = 1
+
+
+"-----------------------------------------------------------------------
 " cscope
 "-----------------------------------------------------------------------
 " use :cstag instead of the default :tag behavior
