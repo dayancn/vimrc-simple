@@ -146,7 +146,7 @@ set sidescrolloff=6
 set fillchars=vert:│
 
 "-----------------------------------------------------------------------
-" 3. advanced programming related settings
+" 2. advanced programming related settings
 "-----------------------------------------------------------------------
 " use spaces instead of tabs
 " set expandtab
