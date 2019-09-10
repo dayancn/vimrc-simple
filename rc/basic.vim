@@ -145,6 +145,10 @@ set sidescrolloff=6
 " use │ instead of | when split screen vertically.
 set fillchars=vert:│
 
+" set color column
+set colorcolumn=80
+
+
 "-----------------------------------------------------------------------
 " 2. advanced programming related settings
 "-----------------------------------------------------------------------
