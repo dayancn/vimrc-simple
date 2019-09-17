@@ -76,8 +76,14 @@ function s:Cycle_macros_menus()
       return
     endif
     let s:menus_loaded = 1
+    " check cscope for definition of a symbol before checking ctags: set to 1
+    " if you want the reverse search order.
     set csto=0
+    " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
     set cst
+    " show msg when any other cscope db added
+    set cscopeverbose
+
     silent! map <unique> <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
     silent! map <unique> <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
     silent! map <unique> <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
