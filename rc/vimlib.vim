@@ -123,7 +123,7 @@ function! OnlineDoc(search_engine)
 	let s:wordUnderCursor = expand("<cword>")
 
 	if a:search_engine == 0
-		let s:url = "http://www.google.com/codesearch?q=".s:wordUnderCursor
+		let s:url = "http://www.google.com/search?q=".s:wordUnderCursor
 	elseif a:search_engine == 1
 		let s:url = "http://www.baidu.com/s?wd=".s:wordUnderCursor
 	elseif a:search_engine == 2

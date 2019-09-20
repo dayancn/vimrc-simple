@@ -213,6 +213,8 @@ nmap <Leader>s? z=
 "-----------------------------------------------------------------------
 " search on-line mappings
 "-----------------------------------------------------------------------
+" www.google.com
+nmap <Leader>g :call OnlineDoc(0)<CR>
 " www.baidu.com
 nmap <Leader>a :call OnlineDoc(1)<CR>
 " www.bing.com
