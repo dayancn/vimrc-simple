@@ -211,6 +211,17 @@ filetype plugin indent on
 " options for insert mode completion
 set completeopt=longest,menu
 
+" set for <Leader>
+let mapleader = ","
+let g:mapleader = ","
+
+" set for <LocalLeader>
+let maplocalleader='\'
+let g:maplocalleader='\'
+
+" The time in milliseconds that is waited for a key code or mapped key sequence to complete.
+set timeoutlen=350
+
 
 "-----------------------------------------------------------------------
 " 3. autocmd
