@@ -35,7 +35,7 @@ function! lookupfile#OpenWindow(bang, initPat)
     else
       let winnr = bufwinnr(s:myBufNum)
       if winnr == -1
-        call genutils#OpenWinNoEa('1sb '. s:myBufNum)
+        call genutils#OpenWinNoEa('sb '. s:myBufNum)
       else
         let wasVisible = 1
         exec winnr 'wincmd w'
