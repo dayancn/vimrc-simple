@@ -40,7 +40,8 @@ if [ "$1" != "" -a ! -e "$1" ]; then
 		-name "*.txt"    -o \
 		-name "*.def"    -o \
 		-name "*.aidl"   -o \
-		-name "*.java"      \
+		-name "*.java"   -o \
+		-name "*.xml"       \
 		\) \
 		-printf "%f\t%p\t1\n" | sort -f >> "$1"
 fi
