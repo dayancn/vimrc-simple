@@ -81,3 +81,11 @@ nmap <silent> <LocalLeader>ff :call CscopeFind('f', expand('<cword>'))<CR>
 " i: Find files #including this file
 nmap <silent> <LocalLeader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 
+
+"-----------------------------------------------------------------------
+" vim_current_word
+"-----------------------------------------------------------------------
+let g:vim_current_word#enabled = 0
+let g:vim_current_word#highlight_twins = 1
+let g:vim_current_word#highlight_current_word = 0
+nmap <silent> <LocalLeader>a :VimCurrentWordToggle<CR>
