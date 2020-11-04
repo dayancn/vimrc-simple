@@ -206,6 +206,10 @@ nmap <F9> vi"#N
 " nmap for shell
 nmap <silent> <Leader>s :shell<CR>
 
+" toggle relative line number on and off
+nmap <silent> <Leader>r :set relativenumber!<CR>
+
+
 "-----------------------------------------------------------------------
 " debug mappings
 "-----------------------------------------------------------------------
