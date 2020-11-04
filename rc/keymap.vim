@@ -201,11 +201,14 @@ nmap <F9> vi"#N
 
 
 "-----------------------------------------------------------------------
-" other mappings
+" misc mappings
 "-----------------------------------------------------------------------
 " nmap for shell
 nmap <silent> <Leader>s :shell<CR>
 
+"-----------------------------------------------------------------------
+" debug mappings
+"-----------------------------------------------------------------------
 " add debug hotkeys for Makefile
 nmap <silent> <Leader>m1 yiwo$(warning "==> [$(<ESC>pa)] <==")<ESC>0
 nmap <silent> <Leader>m2 yiwo$(error   "==> [$(<ESC>pa)] <==")<ESC>0
