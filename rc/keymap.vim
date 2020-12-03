@@ -118,6 +118,7 @@ nmap <Leader>tn :tn<cr>
 "-----------------------------------------------------------------------
 nmap <silent> <Leader>cc :call CQuickfix()<cr>
 nmap <silent> <Leader>cf :call CQuickfixPrev()<CR>
+nmap <silent> <Leader>cp :call CQuickfixPrev()<CR>
 nmap <silent> <Leader>cn :call CQuickfixNext()<CR>
 nmap <silent> <Leader>cw :cwindow<cr>
 nmap <silent> <Leader>lw :lwindow<cr>
