@@ -21,7 +21,7 @@ let g:yankring_history_dir='~/.vim_rain/'
 "-----------------------------------------------------------------------
 " MRU
 "-----------------------------------------------------------------------
-let MRU_Max_Entries = 500
+let MRU_Max_Entries = 1500
 let MRU_Window_Height = 15
 
 
