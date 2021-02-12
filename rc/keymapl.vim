@@ -89,3 +89,16 @@ let g:vim_current_word#enabled = 0
 let g:vim_current_word#highlight_twins = 1
 let g:vim_current_word#highlight_current_word = 0
 nmap <silent> <LocalLeader>a :VimCurrentWordToggle<CR>
+
+
+"-----------------------------------------------------------------------
+" debug mappings for linux kernel
+"-----------------------------------------------------------------------
+nmap <silent> <LocalLeader>` okshow("%8p\n", __builtin_return_address(0));<ESC>0
+nmap <silent> <LocalLeader>1 okshow(YELLOW "---------------\n");<ESC>0
+nmap <silent> <LocalLeader>2 Okshow(YELLOW "---------------\n");<ESC>0
+nmap <silent> <LocalLeader>3 yiwokshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
+nmap <silent> <LocalLeader>4 yiwOkshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
+nmap <silent> <LocalLeader>5 oprintk("==> KDEBUG [%s +%d][%s]\n", __FILE__, __LINE__, __FUNCTION__);<ESC>0
+nmap <silent> <LocalLeader>6 Oprintk("==> KDEBUG [%s +%d][%s]\n", __FILE__, __LINE__, __FUNCTION__);<ESC>0
+

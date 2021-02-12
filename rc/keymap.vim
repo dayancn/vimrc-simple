@@ -219,15 +219,15 @@ nmap <silent> <Leader>m1 yiwo$(warning "==> [$(<ESC>pa)] <==")<ESC>0
 nmap <silent> <Leader>m2 yiwo$(error   "==> [$(<ESC>pa)] <==")<ESC>0
 
 " add debug hotkeys for C/C++ programming
-nmap <silent> <Leader>` o#error "======>>>>>>)))))) PROGRAM CONTAINS THIS PATH !!!"<ESC>0
+nmap <silent> <Leader>` ofshow("%8p\n", __builtin_return_address(0));<ESC>0
 nmap <silent> <Leader>1 ofshow(YELLOW "---------------\n");<ESC>0
 nmap <silent> <Leader>2 Ofshow(YELLOW "---------------\n");<ESC>0
 nmap <silent> <Leader>3 yiwofshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
 nmap <silent> <Leader>4 yiwOfshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
-nmap <silent> <Leader>5 yiwo#pragma message(PRINT_MACRO(<ESC>pa))<ESC>0
-nmap <silent> <Leader>6 yiwO#pragma message(PRINT_MACRO(<ESC>pa))<ESC>0
-nmap <silent> <Leader>7 ofshow("%8p\n", __builtin_return_address(0));<ESC>0
-nmap <silent> <Leader>8 oDBG_ENTERF;<ESC>0
-nmap <silent> <Leader>9 oDBG_RETURN();<left><left>
-nmap <silent> <Leader>0 oDBG_PRINTF;<ESC>0
+nmap <silent> <Leader>5 oprintf("==> UDEBUG [%s +%d][%s]\n", __FILE__, __LINE__, __FUNCTION__);<ESC>0
+nmap <silent> <Leader>6 Oprintf("==> UDEBUG [%s +%d][%s]\n", __FILE__, __LINE__, __FUNCTION__);<ESC>0
+nmap <silent> <Leader>7 yiwo#pragma message(PRINT_MACRO(<ESC>pa))<ESC>0
+nmap <silent> <Leader>8 yiwO#pragma message(PRINT_MACRO(<ESC>pa))<ESC>0
+nmap <silent> <Leader>9 o#error "!!! [UDEBUG] CONDITIONAL COMPILATION !!!"<ESC>0
+nmap <silent> <Leader>0 O#error "!!! [UDEBUG] CONDITIONAL COMPILATION !!!"<ESC>0
 
