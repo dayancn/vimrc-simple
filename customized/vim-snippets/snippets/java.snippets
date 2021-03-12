@@ -204,6 +204,14 @@ snippet info
 	Logger.info(${1:param});
 snippet warn
 	Logger.warn(${1:param});
+snippet ld
+	Log.d(TAG, "UDEBUG [" + Thread.currentThread().getStackTrace()[2].getLineNumber() + "]${1:}");
+snippet le
+	Log.e(TAG, "UDEBUG [" + Thread.currentThread().getStackTrace()[2].getLineNumber() + "]${1:}");
+snippet li
+	Log.i(TAG, "UDEBUG [" + Thread.currentThread().getStackTrace()[2].getLineNumber() + "]${1:}");
+snippet lw
+	Log.w(TAG, "UDEBUG [" + Thread.currentThread().getStackTrace()[2].getLineNumber() + "]${1:}");
 ##
 ## Loops
 snippet enfor

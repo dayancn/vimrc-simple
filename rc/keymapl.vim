@@ -101,4 +101,6 @@ nmap <silent> <LocalLeader>3 yiwokshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
 nmap <silent> <LocalLeader>4 yiwOkshow(GREEN "-----[%d]-----\n", <ESC>pa);<ESC>0
 nmap <silent> <LocalLeader>5 oprintk("==> KDEBUG [%s +%d][%s]\n", __FILE__, __LINE__, __FUNCTION__);<ESC>0
 nmap <silent> <LocalLeader>6 Oprintk("==> KDEBUG [%s +%d][%s]\n", __FILE__, __LINE__, __FUNCTION__);<ESC>0
-
+nmap <silent> <LocalLeader>7 oLog.d(TAG, "UDEBUG [" + Thread.currentThread().getStackTrace()[2].getLineNumber() + "]");<ESC>0
+nmap <silent> <LocalLeader>8 oLog.d(TAG, "UDEBUG [" + Thread.currentThread().getStackTrace()[2].getMethodName() + ":" + Thread.currentThread().getStackTrace()[2].getLineNumber() + "]");<ESC>0
+nmap <silent> <LocalLeader>9 oLog.d(TAG, "UDEBUG [" + Thread.currentThread().getStackTrace()[2].getFileName() + ":" + Thread.currentThread().getStackTrace()[2].getLineNumber() + "]");<ESC>0
