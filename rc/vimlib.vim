@@ -140,6 +140,16 @@ function! OnlineDoc(search_engine)
 endfunction
 
 
+" search on X-Reference
+function! SearchXReference(project, version)
+	let l:browser = "/usr/bin/firefox"
+	let l:url = "http://172.31.48.8:8088/xref" . a:project . a:version . "/search?full=" . expand("<cword>") . "&defs=&refs=&path=&hist=&type=&searchall=true"
+	let l:cmd = "silent !" . l:browser . " " . l:url
+	execute  l:cmd
+	redraw!
+endfunction
+
+
 " run shell command
 function! RunShell(Shell)
 	call system(a:Shell)

@@ -6,6 +6,17 @@
 
 
 "-----------------------------------------------------------------------
+" search on-XReference
+"-----------------------------------------------------------------------
+nmap <silent> <Leader>xn :call SearchXReference("_sdm660_", "n")<CR>
+nmap <silent> <Leader>xo :call SearchXReference("_sdm660_", "o")<CR>
+nmap <silent> <Leader>xp :call SearchXReference("_sdm660_", "p")<CR>
+nmap <silent> <Leader>xq :call SearchXReference("_sdm660_", "q")<CR>
+nmap <silent> <Leader>xr :call SearchXReference("_sdm660_", "r")<CR>
+nmap <silent> <Leader>xR :call SearchXReference("_sdm4290_", "r")<CR>
+
+
+"-----------------------------------------------------------------------
 " set search path for 'ctags'
 "-----------------------------------------------------------------------
 
@@ -344,6 +355,7 @@ set path+=$PROJ_ROOT_PATH/core/code/future/netipvx/udp/inc
 set path+=$PROJ_ROOT_PATH/core/code/future/ssl/inc
 
 " 2. for router projects
+set path&
 set path+=$PROJ_ROOT_PATH/core/private/include
 set path+=$PROJ_ROOT_PATH/core/private/nvram
 set path+=$PROJ_ROOT_PATH/core/os/modules_cameo/include
@@ -366,5 +378,112 @@ set path+=$PROJ_ROOT_PATH/core/library/include
 set path+=$PROJ_ROOT_PATH/core/library/include/ds
 set path+=$PROJ_ROOT_PATH/core/private/datastore/include
 set path+=$PROJ_ROOT_PATH/core/private/datastore/modules
+
+
+" 3. for android projects
+set path&
+set path+=$PROJ_ROOT_PATH/system/media/camera/include
+set path+=$PROJ_ROOT_PATH/frameworks/base/include
+set path+=$PROJ_ROOT_PATH/frameworks/native/include
+set path+=$PROJ_ROOT_PATH/hardware/libhardware/include
+set path+=$PROJ_ROOT_PATH/hardware/libhardware_legacy/include
+set path+=$PROJ_ROOT_PATH/hardware/ril/include
+set path+=$PROJ_ROOT_PATH/bootable/recovery
+set path+=$PROJ_ROOT_PATH/system/core/include
+set path+=$PROJ_ROOT_PATH/system/media/audio/include
+set path+=$PROJ_ROOT_PATH/system/media/audio_effects/include
+set path+=$PROJ_ROOT_PATH/system/media/audio_utils/include
+set path+=$PROJ_ROOT_PATH/route/system/media/audio_route/include
+set path+=$PROJ_ROOT_PATH/frameworks/wilhelm/include
+set path+=$PROJ_ROOT_PATH/frameworks/wilhelm/src/ut
+set path+=$PROJ_ROOT_PATH/frameworks/av/media/ndk
+
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/dp/ol/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/wma/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/bmi/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/mac/src/sys/common/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/mac/src/sys/legacy/src/utils/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/mac/src/sys/legacy/src/system/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/mac/src/sys/legacy/src/platform/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/mac/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/utils/host_diag_log/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/utils/epping/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/utils/ptt/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/utils/nlink/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/utils/logging/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/sap/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/sap/dfs/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/sme/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/cds/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/hdd/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/core/pld/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qcacld-3.0/uapi/linux
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/fw-api/fw
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/fw-api/hw
+
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/global_lmac_if/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/qdf/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/qdf/libc/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/os_if/linux/spectral/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/os_if/linux/scan/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/os_if/linux/wifi_pos/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/os_if/linux/p2p/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/os_if/linux/ftm/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/os_if/linux/nan/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/os_if/linux/tdls/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/os_if/linux/cp_stats/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/dp/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/spectral/dispatcher/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/cfg/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/green_ap/dispatcher/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/scan/dispatcher/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/cmn_services/policy_mgr/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/cmn_services/crypto/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/cmn_services/mgmt_txrx/dispatcher/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/cmn_services/serialization/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/cmn_services/utils/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/cmn_services/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/cmn_services/obj_mgr/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/cmn_services/cmn_defs/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/global_umac_dispatcher/lmac_if/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/wifi_pos/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/regulatory/dispatcher/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/p2p/dispatcher/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/dfs/dispatcher/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/nan/dispatcher/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/nan/core/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/tdls/dispatcher/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/umac/cp_stats/dispatcher/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/direct_buf_rx/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/son/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/green_ap/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/scan/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/init_deinit/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/wifi_pos/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/regulatory/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/p2p/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/dfs/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/ftm/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/nan/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/tdls/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/cp_stats/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/target_if/core/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/init_deinit/dispatcher/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/utils/host_diag_log/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/utils/epping/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/utils/ptt/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/utils/fwlog/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/utils/nlink/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/utils/logging/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/wbuff/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/ftm/dispatcher/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/scheduler/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/hif/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/qca-wifi-host-cmn/wmi/inc
+set path+=$PROJ_ROOT_PATH/vendor/qcom/opensource/wlan/utils/sigma-dut
+
+" kernel
+set path+=$PROJ_ROOT_PATH/kernel/msm-4.14/include
+set path+=$PROJ_ROOT_PATH/kernel/msm-4.19/include
 
 "echo &path
