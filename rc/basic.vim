@@ -239,7 +239,8 @@ if has("autocmd")
 		" don't write swapfile on most commonly used directories for NFS mounts or USB sticks
 		autocmd BufNewFile,BufReadPre /media/*,/mnt/* set directory=/tmp,/var/tmp
 		" start with spec file template
-		autocmd BufEnter *.c,*.h,*.cpp,*.hpp,*.cc source ~/.vim_rain/syntax/c.vim
+		autocmd BufEnter *.c,*.h,*.cpp,*.hpp,*.cc source ~/.vim_rain/syntax/code.vim
+		autocmd BufEnter *.java,*.aidl source ~/.vim_rain/syntax/code.vim
 		" delete trailing white space on save
 		" autocmd BufWrite *   :call DeleteTrailingWhiteSpace()
 		autocmd BufWrite \w\+  :call DeleteTrailingWhiteSpace()
