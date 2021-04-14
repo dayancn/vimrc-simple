@@ -1,8 +1,13 @@
 " matches should be done each time load source files!
-syn match ErrorLeadSpace /^ \+/       " highlight any leading spaces
-syn match ErrorTailSpace /\s\+$/      " highlight any trailing spaces
-syn match cErrorTailSpace /\s\+$/ contained " highlight any trailing spaces
-"syn match Error80        /\%>80v.\+/ " highlight anything past 80 in red
+
+"syn match Error80        /\%>80v.\+/           " highlight anything past 80 in red
+if &ft == "java"
+	syn match ErrorLeadSpace  /^ *	\+/     " highlight any leading spaces
+else
+	syn match ErrorLeadSpace  /^	* \+/   " highlight any leading spaces
+endif
+syn match ErrorTailSpace  /\s\+$/               " highlight any trailing spaces
+syn match cErrorTailSpace /\s\+$/ contained     " highlight any trailing spaces
 
 " process only once
 if exists("my_code_syntax") || &compatible
