@@ -276,9 +276,12 @@ else
 	set background=dark
 	"set background=light
 
-	let g:solarized_termcolors=256
-	colorscheme gruvbox
+	" visual studio code
+	colorscheme codedark
+
+	"colorscheme gruvbox
 	"colorscheme peaksea
+	"let g:solarized_termcolors=256
 	"colorscheme solarized
 	"colorscheme peachpuff
 	"hi CursorLine	ctermfg=NONE	ctermbg=238	cterm=NONE
