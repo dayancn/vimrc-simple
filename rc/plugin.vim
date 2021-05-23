@@ -276,8 +276,11 @@ else
 	set background=dark
 	"set background=light
 
+	set termguicolors
+	colorscheme rigel
+
 	" visual studio code
-	colorscheme codedark
+	"colorscheme codedark
 
 	"colorscheme gruvbox
 	"colorscheme peaksea
