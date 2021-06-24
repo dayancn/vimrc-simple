@@ -179,7 +179,7 @@ if v:version < 800
 else
 	vmap <Leader>g :call VisualSelection('ack', '')<CR>:<C-U><C-R>=@g<CR>
 	vmap <Leader>r :call VisualSelection('replace', '')<CR>:<C-U><C-R>=@g<CR>
-	vmap <Leader>R :call VisualSelection('REPLACE', '')<CR>:<C-U><C-R>=@g<CR>
+	vmap <Leader>R :call VisualSelection('C_replacE', '')<CR>:<C-U><C-R>=@g<CR>
 end
 
 

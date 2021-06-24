@@ -82,7 +82,7 @@ function! VisualSelection(direction, extra_filter) range
 		call CmdLine("Ack '" . l:pattern . "' ./" )
 	elseif a:direction == 'replace'
 		call CmdLine("%s" . '/'. l:pattern . '/')
-	elseif a:direction == 'REPLACE'
+	elseif a:direction == 'C_replace'
 		call CmdLine("%s" . '/\C\<'. l:pattern . '\>/')
 	elseif a:direction == 'f'
 		execute "normal /" . l:pattern . "^M"
